@@ -1,0 +1,3166 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Berlin Academy — Pardaev Samandar | Nemis tili Flashcards</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-deep: #0b3a8c;
+      --bg-ocean: #071936;
+      --cyan-glow: #00d2ff;
+      --blue-glow: #2563eb;
+      --violet-glow: #7c3aed;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0b3a8c;
+      color: #f8fafc;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 15% 20%, rgba(56, 220, 255, 0.34) 0%, transparent 42%),
+        radial-gradient(circle at 82% 28%, rgba(59, 130, 246, 0.45) 0%, transparent 48%),
+        radial-gradient(circle at 50% 88%, rgba(124, 92, 255, 0.22) 0%, transparent 50%),
+        linear-gradient(160deg, #0a3a9a 0%, #1456c8 50%, #0b3f9e 100%);
+      background-attachment: fixed;
+    }
+
+    h1, h2, h3, .font-display {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    }
+
+    /* Premium iOS Glassmorphism */
+    .glass-panel {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.06) 100%);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-top: 1px solid rgba(125, 211, 252, 0.35);
+      border-left: 1px solid rgba(125, 211, 252, 0.25);
+      box-shadow: 
+        0 24px 48px -12px rgba(2, 6, 23, 0.75),
+        inset 0 1px 1px rgba(255, 255, 255, 0.18);
+    }
+
+    .glass-card {
+      background: linear-gradient(145deg, rgba(59, 130, 246, 0.38) 0%, rgba(30, 90, 200, 0.30) 100%);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(148, 163, 184, 0.16);
+      border-top: 1px solid rgba(56, 189, 248, 0.28);
+      box-shadow: 0 14px 32px -8px rgba(2, 8, 23, 0.65);
+      transition: all 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .glass-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(56, 189, 248, 0.45);
+      box-shadow: 
+        0 20px 40px -10px rgba(0, 210, 255, 0.18),
+        0 12px 24px -8px rgba(2, 8, 23, 0.8);
+    }
+
+    /* Top edge luminous highlight like reference UI */
+    .luminous-edge {
+      position: relative;
+    }
+    .luminous-edge::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 18%;
+      right: 18%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #38bdf8, #e0f2fe, #38bdf8, transparent);
+      filter: blur(0.5px);
+      border-radius: 999px;
+      opacity: 0.9;
+    }
+
+    /* Gradient Text */
+    .text-gradient-hero {
+      background: linear-gradient(95deg, #38bdf8 0%, #60a5fa 45%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* CTA Gradient Button */
+    .btn-cta {
+      background: linear-gradient(95deg, #7c3aed 0%, #2563eb 52%, #06b6d4 100%);
+      background-size: 200% auto;
+      box-shadow: 0 10px 28px -6px rgba(6, 182, 212, 0.55), inset 0 1px 1px rgba(255,255,255,0.35);
+      transition: all 0.3s ease;
+    }
+    .btn-cta:hover {
+      background-position: right center;
+      transform: translateY(-2px) scale(1.01);
+      box-shadow: 0 14px 34px -4px rgba(56, 189, 248, 0.65), inset 0 1px 1px rgba(255,255,255,0.45);
+    }
+    .btn-cta:active {
+      transform: scale(0.98);
+    }
+
+    /* Owl: every 3s flaps wings, lifts off the branch and lands again; beak & wings move while talking */
+    #owl-svg .owl-all, #owl-svg .wing-l, #owl-svg .wing-r, #owl-svg .wing-l-talk, #owl-svg .wing-r-talk, #owl-svg .beak { transform-box: fill-box; }
+    #owl-svg .owl-all { transform-origin: 50% 100%; animation: owlHop 3s ease-in-out infinite; }
+    #owl-svg .wing-l { transform-origin: 90% 8%; animation: wingFlapL 3s ease-in-out infinite; }
+    #owl-svg .wing-r { transform-origin: 10% 8%; animation: wingFlapR 3s ease-in-out infinite; }
+    #owl-svg .wing-l-talk { transform-origin: 90% 8%; }
+    #owl-svg .wing-r-talk { transform-origin: 10% 8%; }
+    #owl-svg .beak { transform-origin: 50% 0%; }
+    #owl-svg.owl-talking .wing-l-talk { animation: wingTalkL 0.9s ease-in-out infinite alternate; }
+    #owl-svg.owl-talking .wing-r-talk { animation: wingTalkR 0.9s ease-in-out infinite alternate; }
+    #owl-svg.owl-talking .beak { animation: beakTalk 0.3s ease-in-out infinite alternate; }
+    @keyframes owlHop {
+      0%, 40% { transform: translateY(0) scale(1); }
+      47% { transform: translateY(-14px) scale(1.02); }
+      60% { transform: translateY(-42px) scale(1.05); }
+      74% { transform: translateY(-30px) scale(1.04); }
+      86% { transform: translateY(-6px) scale(1.01); }
+      92% { transform: translateY(0) scale(1); }
+      95% { transform: translateY(-3px); }
+      100% { transform: translateY(0); }
+    }
+    @keyframes wingFlapL {
+      0%, 40% { transform: rotate(0) scale(1); }
+      45% { transform: rotate(55deg) scale(1.2); } 51% { transform: rotate(4deg) scale(1); }
+      57% { transform: rotate(58deg) scale(1.25); } 63% { transform: rotate(4deg) scale(1); }
+      69% { transform: rotate(52deg) scale(1.2); } 75% { transform: rotate(6deg) scale(1); }
+      81% { transform: rotate(46deg) scale(1.15); } 87% { transform: rotate(8deg) scale(1); }
+      93%, 100% { transform: rotate(0) scale(1); }
+    }
+    @keyframes wingFlapR {
+      0%, 40% { transform: rotate(0) scale(1); }
+      45% { transform: rotate(-55deg) scale(1.2); } 51% { transform: rotate(-4deg) scale(1); }
+      57% { transform: rotate(-58deg) scale(1.25); } 63% { transform: rotate(-4deg) scale(1); }
+      69% { transform: rotate(-52deg) scale(1.2); } 75% { transform: rotate(-6deg) scale(1); }
+      81% { transform: rotate(-46deg) scale(1.15); } 87% { transform: rotate(-8deg) scale(1); }
+      93%, 100% { transform: rotate(0) scale(1); }
+    }
+    @keyframes wingTalkL { from { transform: rotate(0); } to { transform: rotate(9deg); } }
+    @keyframes wingTalkR { from { transform: rotate(0); } to { transform: rotate(-9deg); } }
+    @keyframes beakTalk { from { transform: scaleY(1); } to { transform: scaleY(1.45) translateY(1px); } }
+    #owl-svg.owl-sleepy .owl-all, #owl-svg.owl-sleepy .wing-l, #owl-svg.owl-sleepy .wing-r { animation: none; }
+    #owl-stars { transform-origin: 180px 190px; animation: owlOrbit 9s linear infinite; }
+    @keyframes owlOrbit { to { transform: rotate(360deg); } }
+    #owl-aura { animation: owlAura 2.4s ease-in-out infinite alternate; }
+    @keyframes owlAura { from { opacity: 0.6; } to { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) {
+      #owl-svg .owl-all, #owl-svg .wing-l, #owl-svg .wing-r { animation: none; }
+    }
+
+    /* Floating Ambient Bokeh & Owl Animation */
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.55; transform: scale(1); }
+      50% { opacity: 0.9; transform: scale(1.06); }
+    }
+    .animate-float {
+      animation: floatSlow 5.5s ease-in-out infinite;
+    }
+    .animate-glow {
+      animation: pulseGlow 4s ease-in-out infinite;
+    }
+
+    /* 3D Flashcard Flip */
+    .perspective-1000 {
+      perspective: 1200px;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+      transform-style: preserve-3d;
+    }
+    .flip-card-inner.is-flipped {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    .flip-card-back {
+      transform: rotateY(180deg);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(3, 11, 28, 0.6);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(56, 189, 248, 0.3);
+      border-radius: 999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(56, 189, 248, 0.55);
+    }
+
+    /* Screen Fade */
+    .screen-enter {
+      animation: fadeSlideUp 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    @keyframes fadeSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-cyan-500/30 selection:text-cyan-100">
+
+  <!-- Ambient Background Light Orbs -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div class="absolute -top-24 -left-24 w-96 h-96 bg-cyan-400/40 rounded-full blur-[110px] animate-glow"></div>
+    <div class="absolute top-1/3 -right-24 w-[28rem] h-[28rem] bg-blue-400/40 rounded-full blur-[130px]"></div>
+    <div class="absolute -bottom-32 left-1/3 w-96 h-96 bg-indigo-400/30 rounded-full blur-[120px]"></div>
+    <!-- Subtle Bokeh Particles -->
+    <div class="absolute top-[18%] right-[22%] w-3 h-3 rounded-full bg-cyan-300/60 blur-[1px] animate-float"></div>
+    <div class="absolute top-[65%] right-[14%] w-4 h-4 rounded-full bg-blue-400/50 blur-[2px] animate-glow"></div>
+    <div class="absolute bottom-[22%] left-[12%] w-2.5 h-2.5 rounded-full bg-sky-300/50 blur-[1px] animate-float"></div>
+  </div>
+
+  <!-- Toast Notification Box (Replaces alert) -->
+  <div id="toast-box" class="fixed top-5 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 transition-all duration-300 transform -translate-y-3">
+    <div class="glass-panel px-5 py-2.5 rounded-full flex items-center gap-2.5 text-sm font-medium text-cyan-100 shadow-xl border border-cyan-400/40">
+      <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+      <span id="toast-message">Xabar</span>
+    </div>
+  </div>
+
+  <!-- Owl Greeting Subtitles -->
+  <div id="owl-bubble" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-xl pointer-events-none opacity-0 translate-y-4 transition-all duration-500">
+    <div class="glass-panel rounded-3xl px-5 py-4 flex items-start gap-3 border border-cyan-300/50" style="background: linear-gradient(135deg, rgba(37,99,235,0.75), rgba(14,80,190,0.65));">
+      <div class="text-3xl leading-none animate-float">🦉</div>
+      <div class="min-w-0">
+        <div id="owl-bubble-de" class="font-display font-bold text-white text-sm sm:text-base leading-snug"></div>
+        <div id="owl-bubble-uz" class="text-cyan-100 text-xs sm:text-sm mt-1.5 leading-snug"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN APP CONTAINER -->
+  <div class="relative z-10 min-h-screen flex flex-col justify-between max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
+
+    <!-- TOP NAVIGATION BAR -->
+    <header class="flex items-center justify-between gap-3 py-2">
+      <button onclick="navigateTo('hero')" class="flex items-center gap-3 group text-left focus:outline-none">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 via-blue-600 to-violet-600 p-[1px] shadow-lg shadow-cyan-500/25 group-hover:scale-105 transition-transform">
+          <div class="w-full h-full bg-[#0f3f9a] rounded-[11px] flex items-center justify-center">
+            <!-- Owl Mini Emblem -->
+            <svg class="w-6 h-6 text-cyan-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 3c-4.5 0-8 3.2-8 7.5 0 2.6 1.3 4.9 3.3 6.3L6 21l3.5-1.5c.8.2 1.6.3 2.5.3s1.7-.1 2.5-.3L18 21l-1.3-4.2c2-1.4 3.3-3.7 3.3-6.3C20 6.2 16.5 3 12 3z"/>
+              <circle cx="9" cy="10.5" r="2" fill="currentColor" fill-opacity="0.3"/>
+              <circle cx="15" cy="10.5" r="2" fill="currentColor" fill-opacity="0.3"/>
+              <path d="M11 13.5l1 1.5 1-1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div>
+          <span class="font-display font-bold text-base sm:text-lg tracking-tight text-white block leading-none">Berlin Academy</span>
+          <span class="text-[11px] text-cyan-300/80 font-medium tracking-wider uppercase">Deutsch • SRS App</span>
+        </div>
+      </button>
+
+      <!-- Quick Progress Pill -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <div class="glass-card px-3.5 py-1.5 rounded-full flex items-center gap-2 text-xs sm:text-sm">
+          <span class="text-cyan-400">✦</span>
+          <span class="text-slate-300 hidden sm:inline">Yodlangan:</span>
+          <span id="header-mastered-count" class="font-bold text-white">0 / 317</span>
+        </div>
+        <button id="nav-topics-btn" onclick="navigateTo('topics')" class="glass-card hover:bg-cyan-500/20 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium text-cyan-200 border border-cyan-400/30 transition">
+          Mavzular
+        </button>
+      </div>
+    </header>
+
+    <!-- =====================================================================
+         SCREEN 1: HERO / LANDING SCREEN (KIRISH OYNASI)
+    ====================================================================== -->
+    <main id="screen-hero" class="screen-enter my-auto py-6 sm:py-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center">
+        
+        <!-- Left/Main Glassmorphism Hero Card -->
+        <div class="lg:col-span-7 glass-panel luminous-edge rounded-3xl p-6 sm:p-10 lg:p-11 relative overflow-hidden">
+          <!-- Subtle inner corner light -->
+          <div class="absolute -top-16 -right-16 w-48 h-48 bg-cyan-400/15 rounded-full blur-2xl pointer-events-none"></div>
+
+          <!-- Eyebrow Label -->
+          <div class="inline-flex items-center gap-2.5 mb-4">
+            <span class="text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase text-cyan-300/90">
+              NEMIS TILI FLASHCARD PLATFORMASI
+            </span>
+            <span class="w-10 h-[1px] bg-gradient-to-r from-cyan-400/70 to-transparent"></span>
+          </div>
+
+          <!-- Prominent Large Title: Berlin Academy -->
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-[3.4rem] font-extrabold tracking-tight leading-[1.1] text-white mb-2">
+            Berlin Academy
+          </h1>
+
+          <!-- Prominent Large Author Name: Pardaev Samandar -->
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-[2.75rem] font-extrabold tracking-tight leading-[1.15] text-gradient-hero mb-5">
+            Pardaev Samandar
+          </h2>
+
+          <!-- Description -->
+          <p class="text-slate-300/90 text-sm sm:text-base lg:text-lg leading-relaxed max-w-xl mb-8">
+            Nemis tili so‘zlarini mavzular bo‘yicha alohida-alohida tayyorlanib, aqlli intervalli takrorlash (Anki SRS) tizimi va jonli nemischa talaffuz yordamida uzoq muddatga yod oling.
+          </p>
+
+          <!-- Primary Action Buttons -->
+          <div class="flex flex-wrap items-center gap-4 mb-9">
+            <button onclick="navigateTo('topics')" class="btn-cta text-white font-semibold text-base sm:text-lg px-7 sm:px-8 py-3.5 sm:py-4 rounded-full flex items-center gap-3 cursor-pointer">
+              <span>Lug'at yod olish</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </button>
+
+            <button onclick="startQuickMixSession()" class="glass-card hover:bg-white/10 text-slate-200 font-medium text-sm sm:text-base px-5 py-3.5 rounded-full flex items-center gap-2.5 transition cursor-pointer">
+              <span class="w-7 h-7 rounded-full bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center text-cyan-300">
+                ▶
+              </span>
+              <span>Tezkor mashq</span>
+            </button>
+          </div>
+
+          <!-- Bottom Mini Feature Pills (matching reference layout) -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-5 border-t border-white/10">
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-cyan-500/15 border border-cyan-400/30 flex items-center justify-center text-cyan-300 shrink-0 text-sm">
+                🧠
+              </div>
+              <div>
+                <div class="text-xs font-semibold text-white">SRS Tizimi</div>
+                <div class="text-[10px] text-slate-400">Aqlli takrorlash</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-blue-500/15 border border-blue-400/30 flex items-center justify-center text-blue-300 shrink-0 text-sm">
+                🔊
+              </div>
+              <div>
+                <div class="text-xs font-semibold text-white">Audio Talaffuz</div>
+                <div class="text-[10px] text-slate-400">To‘g‘ri urg‘u</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-violet-500/15 border border-violet-400/30 flex items-center justify-center text-violet-300 shrink-0 text-sm">
+                📚
+              </div>
+              <div>
+                <div class="text-xs font-semibold text-white">Mavzular</div>
+                <div class="text-[10px] text-slate-400">Alohida bo‘limlar</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-sky-500/15 border border-sky-400/30 flex items-center justify-center text-sky-300 shrink-0 text-sm">
+                💾
+              </div>
+              <div>
+                <div class="text-xs font-semibold text-white">Saqlanuvchi</div>
+                <div class="text-[10px] text-slate-400">Oflayn xotira</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Visual: Luminous 3D-Style Blue Owl on Frosted Branch -->
+        <div class="lg:col-span-5 flex flex-col items-center justify-center relative">
+          <!-- Floating Info Tag like reference UI -->
+          <div class="hidden sm:flex glass-card px-3.5 py-2 rounded-xl items-center gap-2.5 self-end mb-2 mr-4 animate-float">
+            <span class="w-6 h-6 rounded-full bg-cyan-400/20 border border-cyan-300/50 flex items-center justify-center text-cyan-300 text-xs">⚡</span>
+            <div class="text-[11px] leading-tight">
+              <div class="font-semibold text-white">56 ta Mavzu • A1–B1</div>
+              <div class="text-cyan-300/80">1089 ta saralangan so‘z</div>
+            </div>
+          </div>
+
+          <!-- Custom High-Detail Luminous Blue Owl Illustration -->
+          <div class="relative w-64 h-64 sm:w-80 sm:h-80 flex items-center justify-center animate-float">
+            <!-- Learning progress badge -->
+            <div id="owl-progress" class="absolute top-0 left-1/2 -translate-x-1/2 z-10 glass-card rounded-2xl px-3.5 py-2 text-center border border-cyan-300/50 min-w-[150px]">
+              <div id="owl-stage" class="text-[11px] font-bold text-cyan-200 leading-none mb-1.5">🐣 Küken · jo‘ja</div>
+              <div class="font-display font-extrabold text-white text-lg leading-none"><span id="owl-percent">0%</span></div>
+              <div class="w-full h-1.5 bg-blue-950/50 rounded-full overflow-hidden mt-1.5"><div id="owl-percent-bar" class="h-full bg-gradient-to-r from-cyan-300 to-sky-400 transition-all duration-1000" style="width:0%"></div></div>
+              <div id="owl-count" class="text-[11px] text-cyan-100 mt-1 leading-none">0 / 0 so‘z yodlandi</div>
+            </div>
+            <!-- Radial Aura Behind Owl -->
+            <div class="absolute inset-4 rounded-full bg-gradient-to-tr from-blue-600/40 via-cyan-400/35 to-violet-500/30 blur-2xl animate-glow"></div>
+            
+            <svg id="owl-svg" viewBox="0 0 360 360" class="w-full h-full drop-shadow-[0_20px_35px_rgba(0,210,255,0.35)]" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="owlBodyGrad" cx="50%" cy="35%" r="65%">
+                  <stop offset="0%" stop-color="#38bdf8"/>
+                  <stop offset="45%" stop-color="#0284c7"/>
+                  <stop offset="85%" stop-color="#1e3a8a"/>
+                  <stop offset="100%" stop-color="#0f172a"/>
+                </radialGradient>
+                <radialGradient id="owlBellyGrad" cx="50%" cy="40%" r="60%">
+                  <stop offset="0%" stop-color="#bae6fd" stop-opacity="0.95"/>
+                  <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.7"/>
+                  <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0.2"/>
+                </radialGradient>
+                <radialGradient id="eyeIrisGrad" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#020617"/>
+                  <stop offset="58%" stop-color="#020617"/>
+                  <stop offset="72%" stop-color="#00d2ff"/>
+                  <stop offset="90%" stop-color="#38bdf8"/>
+                  <stop offset="100%" stop-color="#e0f2fe"/>
+                </radialGradient>
+                <linearGradient id="branchGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#0f172a" stop-opacity="0.2"/>
+                  <stop offset="30%" stop-color="#1e3a8a"/>
+                  <stop offset="70%" stop-color="#0284c7"/>
+                  <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.3"/>
+                </linearGradient>
+                <linearGradient id="frostGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#bae6fd" stop-opacity="0"/>
+                  <stop offset="50%" stop-color="#e0f2fe" stop-opacity="0.95"/>
+                  <stop offset="100%" stop-color="#bae6fd" stop-opacity="0"/>
+                </linearGradient>
+                <radialGradient id="goldGrad" cx="50%" cy="35%" r="65%"><stop offset="0%" stop-color="#fff3b0"/><stop offset="45%" stop-color="#fbbf24"/><stop offset="85%" stop-color="#d97706"/><stop offset="100%" stop-color="#92400e"/></radialGradient>
+                <radialGradient id="goldBellyGrad" cx="50%" cy="40%" r="60%"><stop offset="0%" stop-color="#fffbe0" stop-opacity="0.95"/><stop offset="55%" stop-color="#fde68a" stop-opacity="0.8"/><stop offset="100%" stop-color="#f59e0b" stop-opacity="0.3"/></radialGradient>
+                <radialGradient id="eyeGoldGrad" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1c0a00"/><stop offset="58%" stop-color="#1c0a00"/><stop offset="72%" stop-color="#f59e0b"/><stop offset="90%" stop-color="#fde047"/><stop offset="100%" stop-color="#fff7d6"/></radialGradient>
+                <radialGradient id="auraGrad" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#fde68a" stop-opacity="0.6"/><stop offset="60%" stop-color="#fbbf24" stop-opacity="0.25"/><stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/></radialGradient>
+              </defs>
+
+              <!-- Frosted Branch -->
+              <path d="M25 292 Q 165 268 335 242" stroke="url(#branchGrad)" stroke-width="16" stroke-linecap="round"/>
+              <path d="M45 284 Q 170 261 315 237" stroke="url(#frostGrad)" stroke-width="4" stroke-linecap="round"/>
+              <!-- Small Twig -->
+              <path d="M265 252 L 305 222" stroke="#1e40af" stroke-width="6" stroke-linecap="round"/>
+              <circle cx="308" cy="220" r="4" fill="#7dd3fc"/>
+
+              <g id="owl-grow" style="transform-origin: 180px 278px; transform: scale(0.62); transition: transform 1.2s cubic-bezier(.34,1.56,.64,1);">
+              <g class="owl-all">
+              <circle id="owl-aura" cx="180" cy="180" r="150" fill="url(#auraGrad)" style="display:none"/>
+              <g id="owl-stars" style="display:none"><text x="70" y="120" font-size="22" fill="#fde047" font-family="sans-serif">✦</text><text x="282" y="140" font-size="18" fill="#fde047" font-family="sans-serif">✦</text><text x="92" y="236" font-size="16" fill="#fef9c3" font-family="sans-serif">✦</text><text x="272" y="238" font-size="22" fill="#fde047" font-family="sans-serif">✦</text></g>
+              <!-- Owl Tail Feathers -->
+              <path id="owl-tail" d="M155 265 L 145 302 L 165 294 L 180 306 L 195 294 L 212 301 L 202 265 Z" fill="#1e3a8a"/>
+              <path id="owl-cape" d="M120 158 L 78 286 Q 180 306 282 286 L 240 158 Z" fill="#9f1239" stroke="#fbbf24" stroke-width="3" style="display:none"/>
+
+              <!-- Owl Main Body -->
+              <ellipse id="owl-body" cx="180" cy="195" rx="74" ry="82" fill="url(#owlBodyGrad)"/>
+
+              <!-- Wings -->
+              <g class="wing-l"><g class="wing-l-talk"><path id="owl-wing-l" d="M108 158 C 86 185, 92 238, 124 256 C 118 222, 120 186, 128 164 Z" fill="#0369a1" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.5"/></g></g>
+              <g class="wing-r"><g class="wing-r-talk"><path id="owl-wing-r" d="M252 158 C 274 185, 268 238, 236 256 C 242 222, 240 186, 232 164 Z" fill="#0369a1" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.5"/></g></g>
+
+              <!-- Belly Plumage -->
+              <ellipse id="owl-belly" cx="180" cy="206" rx="48" ry="56" fill="url(#owlBellyGrad)"/>
+              <!-- Feather Scallops -->
+              <path d="M154 188 Q 164 196 174 188 M186 188 Q 196 196 206 188" stroke="#e0f2fe" stroke-width="2" stroke-linecap="round" opacity="0.65"/>
+              <path d="M148 206 Q 160 215 172 206 M174 206 Q 186 215 198 206 M198 206 Q 208 214 214 206" stroke="#e0f2fe" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+              <path d="M156 224 Q 168 233 180 224 M180 224 Q 192 233 204 224" stroke="#e0f2fe" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+
+              <!-- Owl Head -->
+              <ellipse id="owl-head" cx="180" cy="118" rx="68" ry="56" fill="url(#owlBodyGrad)"/>
+              
+              <!-- Ear Tufts & Luminous Crown Dots -->
+              <path id="owl-tuft-l" d="M118 88 L 106 58 L 142 74 Z" fill="#0284c7"/>
+              <path id="owl-tuft-r" d="M242 88 L 254 58 L 218 74 Z" fill="#0284c7"/>
+              <circle cx="180" cy="70" r="2.2" fill="#e0f2fe"/>
+              <circle cx="166" cy="73" r="1.8" fill="#7dd3fc"/>
+              <circle cx="194" cy="73" r="1.8" fill="#7dd3fc"/>
+              <circle cx="153" cy="78" r="1.5" fill="#38bdf8"/>
+              <circle cx="207" cy="78" r="1.5" fill="#38bdf8"/>
+
+              <!-- Facial Disc Rings -->
+              <circle cx="151" cy="116" r="30" fill="#0c4a6e" stroke="#7dd3fc" stroke-width="2"/>
+              <circle cx="209" cy="116" r="30" fill="#0c4a6e" stroke="#7dd3fc" stroke-width="2"/>
+
+              <!-- Large Glowing Eyes -->
+              <circle id="owl-iris-l" cx="151" cy="116" r="23" fill="url(#eyeIrisGrad)"/>
+              <circle id="owl-iris-r" cx="209" cy="116" r="23" fill="url(#eyeIrisGrad)"/>
+
+              <!-- Eye Gloss Reflections -->
+              <circle cx="143" cy="108" r="5.5" fill="#ffffff"/>
+              <circle cx="158" cy="122" r="2.2" fill="#bae6fd"/>
+              <circle cx="201" cy="108" r="5.5" fill="#ffffff"/>
+              <circle cx="216" cy="122" r="2.2" fill="#bae6fd"/>
+
+              <!-- Beak -->
+              <g class="beak"><path id="owl-beak-path" d="M173 128 L 187 128 L 180 144 Z" fill="#38bdf8" stroke="#e0f2fe" stroke-width="1"/></g>
+              <g id="owl-lids" style="display:none"><circle cx="151" cy="116" r="24" fill="#0369a1"/><circle cx="209" cy="116" r="24" fill="#0369a1"/><path d="M130 118 Q151 130 172 118 M188 118 Q209 130 230 118" stroke="#e0f2fe" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+              <text id="owl-zzz" x="250" y="72" font-size="26" font-weight="800" fill="#e0f2fe" font-family="sans-serif" style="display:none">Zzz</text>
+              <g id="owl-glasses" style="display:none"><circle cx="151" cy="116" r="27" stroke="#e0f2fe" stroke-width="3.5" fill="rgba(186,230,253,0.14)"/><circle cx="209" cy="116" r="27" stroke="#e0f2fe" stroke-width="3.5" fill="rgba(186,230,253,0.14)"/><path d="M178 114 Q180 108 182 114" stroke="#e0f2fe" stroke-width="3.5" fill="none"/></g>
+              <g id="owl-cap" style="display:none"><path d="M140 70 L140 92 Q180 104 220 92 L220 70 Z" fill="#1e3a8a" stroke="#7dd3fc" stroke-width="1.5"/><path d="M180 36 L254 58 L180 80 L106 58 Z" fill="#0f172a" stroke="#7dd3fc" stroke-width="1.5"/><circle cx="180" cy="58" r="3.5" fill="#fbbf24"/><path d="M180 58 L240 63 L240 88" stroke="#fbbf24" stroke-width="2.5" fill="none"/><circle cx="240" cy="92" r="4.5" fill="#fbbf24"/><text id="owl-cap-text" x="180" y="91" text-anchor="middle" font-size="7.5" font-weight="800" fill="#fde68a" font-family="sans-serif" style="display:none">BERLIN ACADEMY</text></g>
+
+              <g id="owl-scarf" style="display:none"><path d="M122 160 Q180 188 238 160 L238 176 Q180 204 122 176 Z" fill="#22c55e"/><path d="M214 184 L238 184 L242 236 L220 230 Z" fill="#22c55e"/><path d="M217 200 L240 202 M218 214 L241 216" stroke="#fff" stroke-width="3"/></g>
+              <g id="owl-bow" style="display:none"><path d="M180 182 L162 171 L162 193 Z M180 182 L198 171 L198 193 Z" fill="#ef4444"/><circle cx="180" cy="182" r="4.5" fill="#b91c1c"/></g>
+              <g id="owl-book" style="display:none"><rect x="204" y="228" width="30" height="38" rx="3" fill="#2563eb" stroke="#bfdbfe" stroke-width="1.5" transform="rotate(8 219 247)"/><path d="M210 238 L228 240 M209 246 L227 248 M208 254 L226 256" stroke="#fff" stroke-width="2" transform="rotate(8 219 247)"/></g>
+              <g id="owl-medal" style="display:none"><path d="M168 200 L180 226 L192 200" fill="#ef4444"/><circle cx="180" cy="232" r="9" fill="#fbbf24" stroke="#fde68a" stroke-width="2"/><text x="180" y="236" text-anchor="middle" font-size="11" fill="#92400e" font-family="sans-serif" font-weight="800">★</text></g>
+              <g id="owl-diploma" style="display:none"><rect x="110" y="240" width="40" height="14" rx="7" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5" transform="rotate(-12 130 247)"/><path d="M128 238 L128 256" stroke="#ef4444" stroke-width="4" transform="rotate(-12 130 247)"/></g>
+
+              <!-- Claws gripping the frosted branch -->
+              <g id="owl-claws" stroke="#bae6fd" stroke-width="3.2" stroke-linecap="round">
+                <path d="M154 266 L 150 278"/>
+                <path d="M161 266 L 159 279"/>
+                <path d="M168 266 L 167 278"/>
+                <path d="M192 266 L 193 278"/>
+                <path d="M199 266 L 201 279"/>
+                <path d="M206 266 L 210 278"/>
+              </g>
+              </g>
+              </g>
+            </svg>
+          </div>
+          <div class="mt-4 flex items-center gap-2.5">
+            <span id="owl-streak" class="glass-card rounded-xl px-3 py-2 text-xs font-bold text-white">🔥 0 kun</span>
+            <button onclick="shareOwlCard()" class="glass-card hover:bg-cyan-500/25 rounded-xl px-3.5 py-2 text-xs font-bold text-cyan-100 transition active:scale-95 cursor-pointer">📤 Natijani ulashish</button>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- =====================================================================
+         SCREEN 2: TOPICS / DECKS LIST (MAVZULAR RO'YXATI)
+    ====================================================================== -->
+    <section id="screen-topics" class="hidden screen-enter my-auto py-4 sm:py-6">
+      <!-- Top Header & Controls -->
+      <div class="glass-panel rounded-2xl p-4 sm:p-6 mb-6">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <button onclick="navigateTo('hero')" class="inline-flex items-center gap-1.5 text-xs font-medium text-cyan-300 hover:text-cyan-200 mb-1.5 transition">
+              <span>←</span> Bosh sahifaga qaytish
+            </button>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">
+              Mavzular bo‘yicha lug‘atlar
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-300 mt-0.5">
+              O‘zingizga kerakli mavzuni tanlang yoki bir nechta mavzuni belgilab birgalikda yodlang.
+            </p>
+          </div>
+
+          <!-- Search & Multi-select Action -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+            <div class="relative">
+              <input 
+                id="topic-search-input" 
+                type="text" 
+                oninput="renderTopics()"
+                placeholder="Mavzu yoki so‘z qidirish..." 
+                class="w-full sm:w-60 bg-[#0a2f78]/70 border border-cyan-400/25 focus:border-cyan-400 rounded-xl pl-9 pr-4 py-2.5 text-sm text-white placeholder-slate-400 focus:outline-none transition"
+              />
+              <svg class="w-4 h-4 text-cyan-400 absolute left-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+              </svg>
+            </div>
+
+            <button 
+              id="start-selected-btn" 
+              onclick="startSelectedTopics()" 
+              class="hidden btn-cta text-white text-sm font-semibold px-5 py-2.5 rounded-xl items-center justify-center gap-2 cursor-pointer"
+            >
+              <span>Tanlanganlarni boshlash</span>
+              <span id="selected-topics-badge" class="bg-white/20 px-2 py-0.5 rounded-full text-xs">0</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search Results Preview (when searching specific word) -->
+      <div id="global-word-search-results" class="hidden glass-panel rounded-2xl p-4 sm:p-5 mb-6">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="text-sm font-semibold text-cyan-300">Topilgan so‘zlar:</h3>
+          <button onclick="document.getElementById('topic-search-input').value=''; renderTopics();" class="text-xs text-slate-400 hover:text-white">Tozalash</button>
+        </div>
+        <div id="global-word-search-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 max-h-60 overflow-y-auto pr-1"></div>
+      </div>
+
+      <!-- Topics Grid -->
+      <div id="topics-grid" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <!-- Populated dynamically by JS -->
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SCREEN 3: FLASHCARD STUDY SESSION (ANKI SRS MASHG'ULOT)
+    ====================================================================== -->
+    <section id="screen-study" class="hidden screen-enter my-auto py-2 sm:py-4 max-w-2xl mx-auto w-full">
+      <!-- Top Session Header -->
+      <div class="flex items-center justify-between gap-3 mb-4">
+        <button onclick="navigateTo('topics')" class="glass-card px-3.5 py-2 rounded-xl text-xs sm:text-sm font-medium text-slate-200 hover:text-white flex items-center gap-1.5">
+          <span>✕</span> Chiqish
+        </button>
+
+        <div class="text-center flex-1 min-w-0">
+          <div id="study-topic-title" class="font-display font-bold text-sm sm:text-base text-white truncate">
+            1. Begrüßung und Kommunikation
+          </div>
+          <div id="study-counter-text" class="text-xs text-cyan-300 font-medium">
+            1 / 25 karta qoldi
+          </div>
+        </div>
+
+        <!-- Direction Toggle (DE -> UZ or UZ -> DE) -->
+        <button onclick="toggleStudyDirection()" id="direction-toggle-btn" class="glass-card px-3 py-2 rounded-xl text-xs font-bold text-cyan-300 border border-cyan-400/30 hover:bg-cyan-500/20 transition" title="Til yo‘nalishini almashtirish">
+          DE → UZ
+        </button>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="w-full h-2 bg-blue-950/50 rounded-full overflow-hidden mb-6 border border-white/10">
+        <div id="study-progress-bar" class="h-full bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 transition-all duration-500" style="width: 10%"></div>
+      </div>
+
+      <!-- Active Flashcard Container -->
+      <div id="flashcard-stage" class="perspective-1000 w-full h-[330px] sm:h-[370px] mb-6 cursor-pointer select-none" onclick="flipCard()">
+        <div id="flashcard-inner" class="flip-card-inner">
+          
+          <!-- FRONT OF CARD -->
+          <div class="flip-card-front glass-panel luminous-edge rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span id="card-status-pill" class="px-3 py-1 rounded-full text-[11px] font-semibold bg-cyan-500/15 text-cyan-300 border border-cyan-400/30">
+                Yangi so‘z
+              </span>
+              <button onclick="event.stopPropagation(); speakCurrentCard();" class="w-11 h-11 rounded-2xl bg-cyan-500/20 hover:bg-cyan-500/35 border border-cyan-400/40 flex items-center justify-center text-cyan-200 transition active:scale-95" title="Nemischa talaffuzni eshitish">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11 5L6 9H2v6h4l5 4V5zM15.54 8.46a5 5 0 010 7.07M19.07 4.93a10 10 0 010 14.14"/>
+                </svg>
+              </button>
+            </div>
+
+            <div class="my-auto text-center px-2">
+              <div id="card-front-lang" class="text-xs uppercase tracking-widest text-slate-400 mb-2">Deutsch</div>
+              <div id="card-front-text" class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-snug">
+                der Vater
+              </div>
+            </div>
+
+            <div class="text-center text-xs text-cyan-300/75 flex items-center justify-center gap-1.5">
+              <span>Javobni ko‘rish uchun kartaga bosing</span>
+            </div>
+          </div>
+
+          <!-- BACK OF CARD -->
+          <div class="flip-card-back glass-panel luminous-edge rounded-3xl p-6 sm:p-8 flex flex-col justify-between bg-gradient-to-br from-blue-950/80 to-indigo-950/80">
+            <div class="flex items-center justify-between">
+              <span id="card-back-topic-tag" class="text-xs text-slate-300 truncate max-w-[70%]">
+                2. Familie - Oila
+              </span>
+              <button onclick="event.stopPropagation(); speakCurrentCard();" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-cyan-300 transition active:scale-95">
+                🔊
+              </button>
+            </div>
+
+            <div class="my-auto text-center px-2">
+              <div id="card-back-sub" class="text-sm sm:text-base font-medium text-cyan-300/90 mb-2">
+                der Vater
+              </div>
+              <div class="w-12 h-[1px] bg-white/20 mx-auto mb-3"></div>
+              <div id="card-back-text" class="font-display text-3xl sm:text-4xl font-extrabold text-white leading-snug">
+                ota
+              </div>
+            </div>
+
+            <div class="text-center text-xs text-slate-400">
+              Qanchalik oson esladingiz? Pastdan baholang ↓
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SRS Action Controls -->
+      <div id="show-answer-wrapper" class="flex justify-center">
+        <button onclick="flipCard()" class="btn-cta w-full sm:w-auto min-w-[240px] text-white font-semibold py-4 px-8 rounded-2xl text-base shadow-lg cursor-pointer">
+          Javobni ko‘rsatish
+        </button>
+      </div>
+
+      <!-- 4 SRS Rating Buttons (Hidden until flipped) -->
+      <div id="srs-buttons-wrapper" class="hidden grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
+        <button onclick="rateCard(1)" class="glass-card hover:bg-rose-500/25 border-rose-500/40 p-3 rounded-2xl text-center transition active:scale-95 cursor-pointer">
+          <div class="text-xs text-rose-300 font-medium mb-0.5">&lt; 1 daq</div>
+          <div class="font-bold text-sm sm:text-base text-rose-100">Qiyin</div>
+        </button>
+
+        <button onclick="rateCard(2)" class="glass-card hover:bg-amber-500/25 border-amber-500/40 p-3 rounded-2xl text-center transition active:scale-95 cursor-pointer">
+          <div id="interval-hard" class="text-xs text-amber-300 font-medium mb-0.5">12 soat</div>
+          <div class="font-bold text-sm sm:text-base text-amber-100">O‘rtacha</div>
+        </button>
+
+        <button onclick="rateCard(3)" class="glass-card hover:bg-emerald-500/25 border-emerald-500/40 p-3 rounded-2xl text-center transition active:scale-95 cursor-pointer">
+          <div id="interval-good" class="text-xs text-emerald-300 font-medium mb-0.5">1 kun</div>
+          <div class="font-bold text-sm sm:text-base text-emerald-100">Yaxshi</div>
+        </button>
+
+        <button onclick="rateCard(4)" class="glass-card hover:bg-cyan-500/25 border-cyan-400/50 p-3 rounded-2xl text-center transition active:scale-95 cursor-pointer">
+          <div id="interval-easy" class="text-xs text-cyan-300 font-medium mb-0.5">4 kun</div>
+          <div class="font-bold text-sm sm:text-base text-cyan-100">Oson</div>
+        </button>
+      </div>
+
+      <!-- Session Complete Celebration Screen -->
+      <div id="session-complete-panel" class="hidden glass-panel luminous-edge rounded-3xl p-8 text-center">
+        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-600 mx-auto flex items-center justify-center text-3xl mb-4 shadow-lg shadow-cyan-500/30">
+          🎉
+        </div>
+        <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white mb-2">
+          Barakalla! Mavzu yakunlandi
+        </h3>
+        <p class="text-slate-300 text-sm sm:text-base max-w-md mx-auto mb-6">
+          Siz ushbu bo‘limdagi barcha rejalashtirilgan so‘zlarni muvaffaqiyatli takrorladingiz.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <button onclick="navigateTo('topics')" class="btn-cta w-full sm:w-auto px-6 py-3 rounded-xl font-semibold text-white cursor-pointer">
+            Boshqa mavzuga o‘tish
+          </button>
+          <button onclick="practiceAllAgain()" class="glass-card w-full sm:w-auto px-6 py-3 rounded-xl font-medium text-cyan-200 hover:bg-white/10 cursor-pointer">
+            Qayta mashq qilish
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SCREEN 4: VOCABULARY TABLE VIEW (LUG'AT RO'YXATI JADVALI)
+    ====================================================================== -->
+    <section id="screen-table" class="hidden screen-enter my-auto py-4 sm:py-6 max-w-4xl mx-auto w-full">
+      <div class="glass-panel rounded-3xl p-5 sm:p-7">
+        <!-- Header -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-white/10">
+          <div>
+            <button onclick="navigateTo('topics')" class="inline-flex items-center gap-1.5 text-xs font-medium text-cyan-300 hover:text-cyan-200 mb-1.5">
+              <span>←</span> Mavzularga qaytish
+            </button>
+            <h2 id="table-topic-title" class="font-display text-xl sm:text-2xl font-bold text-white">
+              1. Begrüßung und Kommunikation - Salomlashish va muloqot
+            </h2>
+          </div>
+
+          <div class="flex items-center gap-2.5">
+            <button id="table-start-study-btn" class="btn-cta px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-white cursor-pointer">
+              Kartochkada yodlash →
+            </button>
+            <button id="table-reset-btn" class="glass-card hover:bg-rose-500/20 border-rose-500/30 px-3.5 py-2.5 rounded-xl text-xs text-rose-200 transition cursor-pointer" title="Ushbu mavzu natijalarini noldan boshlash">
+              Tiklash
+            </button>
+          </div>
+        </div>
+
+        <!-- Vocabulary List Table -->
+        <div class="mt-5 overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b border-cyan-400/25 text-xs uppercase tracking-wider text-cyan-300">
+                <th class="py-3 px-3">#</th>
+                <th class="py-3 px-3">Deutsch</th>
+                <th class="py-3 px-3">O‘zbekcha</th>
+                <th class="py-3 px-3 text-center">Talaffuz</th>
+                <th class="py-3 px-3 text-right">Holati</th>
+              </tr>
+            </thead>
+            <tbody id="vocabulary-table-body" class="divide-y divide-white/10 text-sm">
+              <!-- Populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="pt-6 pb-2 text-center sm:flex items-center justify-between text-xs text-slate-400/80 border-t border-white/5 mt-6">
+      <div>© 2026 Pardaev Samandar • Berlin Academy</div>
+      <div class="mt-1 sm:mt-0 text-cyan-300/60">Nemis tili lug‘ati • SRS Flashcard Platformasi</div>
+    </footer>
+
+  </div>
+
+  <!-- =====================================================================
+       APPLICATION LOGIC & VOCABULARY DATA
+  ====================================================================== -->
+  <script>
+    // Complete Curriculum Data from User's Images
+    const CURRICULUM_DATA = [
+      {
+        id: 'topic-1',
+        number: 1,
+        deTitle: 'Begrüßung und Kommunikation',
+        uzTitle: 'Salomlashish va muloqot',
+        icon: '👋',
+        words: [
+          { id: 't1_1', de: 'Hallo', uz: 'salom' },
+          { id: 't1_2', de: 'Guten Morgen', uz: 'xayrli tong' },
+          { id: 't1_3', de: 'Guten Tag', uz: 'xayrli kun' },
+          { id: 't1_4', de: 'Guten Abend', uz: 'xayrli kech' },
+          { id: 't1_5', de: 'Gute Nacht', uz: 'xayrli tun' },
+          { id: 't1_6', de: 'Tschüss', uz: 'xayr' },
+          { id: 't1_7', de: 'Auf Wiedersehen', uz: "ko'rishguncha" },
+          { id: 't1_8', de: 'Bitte', uz: 'iltimos / marhamat' },
+          { id: 't1_9', de: 'Danke', uz: 'rahmat' },
+          { id: 't1_10', de: 'Vielen Dank', uz: 'katta rahmat' },
+          { id: 't1_11', de: 'Entschuldigung', uz: 'kechirasiz' },
+          { id: 't1_12', de: 'Ja', uz: 'ha' },
+          { id: 't1_13', de: 'Nein', uz: "yo'q" },
+          { id: 't1_14', de: 'Vielleicht', uz: 'balki' },
+          { id: 't1_15', de: 'Willkommen', uz: 'xush kelibsiz' },
+          { id: 't1_16', de: 'Wie?', uz: 'qanday?' },
+          { id: 't1_17', de: 'Was?', uz: 'nima?' },
+          { id: 't1_18', de: 'Wer?', uz: 'kim?' },
+          { id: 't1_19', de: 'Wo?', uz: 'qayerda?' },
+          { id: 't1_20', de: 'Woher?', uz: 'qayerdan?' },
+          { id: 't1_21', de: 'Wann?', uz: 'qachon?' },
+          { id: 't1_22', de: 'Warum?', uz: 'nima uchun?' },
+          { id: 't1_23', de: 'Wie viel?', uz: 'qancha?' },
+          { id: 't1_24', de: 'Wie viele?', uz: 'nechta?' },
+          { id: 't1_25', de: 'Wie heißt du?', uz: 'isming nima?' }
+        ]
+      },
+      {
+        id: 'topic-2',
+        number: 2,
+        deTitle: 'Familie',
+        uzTitle: 'Oila',
+        icon: '👨‍👩‍👧‍👦',
+        words: [
+          { id: 't2_1', de: 'die Familie', uz: 'oila' },
+          { id: 't2_2', de: 'der Vater', uz: 'ota' },
+          { id: 't2_3', de: 'die Mutter', uz: 'ona' },
+          { id: 't2_4', de: 'die Eltern', uz: 'ota-ona' },
+          { id: 't2_5', de: 'der Sohn', uz: "o'g'il" },
+          { id: 't2_6', de: 'die Tochter', uz: 'qiz' },
+          { id: 't2_7', de: 'der Bruder', uz: 'aka / uka' },
+          { id: 't2_8', de: 'die Schwester', uz: 'opa / singil' },
+          { id: 't2_9', de: 'die Geschwister', uz: 'aka-uka va opa-singillar' },
+          { id: 't2_10', de: 'der Großvater', uz: 'bobo' },
+          { id: 't2_11', de: 'die Großmutter', uz: 'buvi' },
+          { id: 't2_12', de: 'die Großeltern', uz: 'bobo va buvi' },
+          { id: 't2_13', de: 'der Onkel', uz: "amaki / tog'a" },
+          { id: 't2_14', de: 'die Tante', uz: 'amma / xola' },
+          { id: 't2_15', de: 'der Cousin', uz: "amakivachcha / tog'avachcha" },
+          { id: 't2_16', de: 'die Cousine', uz: 'qarindosh qiz' },
+          { id: 't2_17', de: 'der Mann', uz: 'erkak / er' },
+          { id: 't2_18', de: 'die Frau', uz: 'ayol / xotin' },
+          { id: 't2_19', de: 'das Kind', uz: 'bola' },
+          { id: 't2_20', de: 'die Kinder', uz: 'bolalar' },
+          { id: 't2_21', de: 'der Ehemann', uz: 'er' },
+          { id: 't2_22', de: 'die Ehefrau', uz: 'rafiqa' },
+          { id: 't2_23', de: 'ledig', uz: "bo'ydoq / turmushga chiqmagan" },
+          { id: 't2_24', de: 'verheiratet', uz: 'turmush qurgan' }
+        ]
+      },
+      {
+        id: 'topic-3',
+        number: 3,
+        deTitle: 'Zahlen',
+        uzTitle: 'Sonlar',
+        icon: '🔢',
+        words: [
+          { id: 't3_1', de: 'null', uz: 'nol' },
+          { id: 't3_2', de: 'eins', uz: 'bir' },
+          { id: 't3_3', de: 'zwei', uz: 'ikki' },
+          { id: 't3_4', de: 'drei', uz: 'uch' },
+          { id: 't3_5', de: 'vier', uz: "to'rt" },
+          { id: 't3_6', de: 'fünf', uz: 'besh' },
+          { id: 't3_7', de: 'sechs', uz: 'olti' },
+          { id: 't3_8', de: 'sieben', uz: 'yetti' },
+          { id: 't3_9', de: 'acht', uz: 'sakkiz' },
+          { id: 't3_10', de: 'neun', uz: "to'qqiz" },
+          { id: 't3_11', de: 'zehn', uz: "o'n" },
+          { id: 't3_12', de: 'elf', uz: "o'n bir" },
+          { id: 't3_13', de: 'zwölf', uz: "o'n ikki" },
+          { id: 't3_14', de: 'dreizehn', uz: "o'n uch" },
+          { id: 't3_15', de: 'vierzehn', uz: "o'n to'rt" },
+          { id: 't3_16', de: 'fünfzehn', uz: "o'n besh" },
+          { id: 't3_17', de: 'sechzehn', uz: "o'n olti" },
+          { id: 't3_18', de: 'siebzehn', uz: "o'n yetti" },
+          { id: 't3_19', de: 'achtzehn', uz: "o'n sakkiz" },
+          { id: 't3_20', de: 'neunzehn', uz: "o'n to'qqiz" },
+          { id: 't3_21', de: 'zwanzig', uz: 'yigirma' },
+          { id: 't3_22', de: 'dreißig', uz: "o'ttiz" },
+          { id: 't3_23', de: 'vierzig', uz: 'qirq' },
+          { id: 't3_24', de: 'fünfzig', uz: 'ellik' },
+          { id: 't3_25', de: 'hundert', uz: 'yuz' },
+          { id: 't3_26', de: 'tausend', uz: 'ming' },
+          { id: 't3_27', de: 'erste', uz: 'birinchi' }
+        ]
+      },
+      {
+        id: 'topic-4',
+        number: 4,
+        deTitle: 'Farben und Formen',
+        uzTitle: 'Ranglar va shakllar',
+        icon: '🎨',
+        words: [
+          { id: 't4_1', de: 'die Farbe', uz: 'rang' },
+          { id: 't4_2', de: 'rot', uz: 'qizil' },
+          { id: 't4_3', de: 'blau', uz: "ko'k" },
+          { id: 't4_4', de: 'grün', uz: 'yashil' },
+          { id: 't4_5', de: 'gelb', uz: 'sariq' },
+          { id: 't4_6', de: 'schwarz', uz: 'qora' },
+          { id: 't4_7', de: 'weiß', uz: 'oq' },
+          { id: 't4_8', de: 'grau', uz: 'kulrang' },
+          { id: 't4_9', de: 'braun', uz: 'jigarrang' },
+          { id: 't4_10', de: 'orange', uz: "to'q sariq" },
+          { id: 't4_11', de: 'rosa', uz: 'pushti' },
+          { id: 't4_12', de: 'lila', uz: 'binafsha' },
+          { id: 't4_13', de: 'hell', uz: 'och' },
+          { id: 't4_14', de: 'dunkel', uz: "to'q" },
+          { id: 't4_15', de: 'rund', uz: 'dumaloq' },
+          { id: 't4_16', de: 'eckig', uz: 'burchakli' },
+          { id: 't4_17', de: 'der Kreis', uz: 'doira' },
+          { id: 't4_18', de: 'das Quadrat', uz: 'kvadrat' },
+          { id: 't4_19', de: 'das Rechteck', uz: "to'g'ri to'rtburchak" }
+        ]
+      },
+      {
+        id: 'topic-5',
+        number: 5,
+        deTitle: 'Berufe',
+        uzTitle: 'Kasblar',
+        icon: '💼',
+        words: [
+          { id: 't5_1', de: 'der Lehrer', uz: "o'qituvchi erkak" },
+          { id: 't5_2', de: 'die Lehrerin', uz: "o'qituvchi ayol" },
+          { id: 't5_3', de: 'der Schüler', uz: "o'quvchi" },
+          { id: 't5_4', de: 'die Schülerin', uz: "o'quvchi qiz" },
+          { id: 't5_5', de: 'der Arzt', uz: 'shifokor erkak' },
+          { id: 't5_6', de: 'die Ärztin', uz: 'shifokor ayol' },
+          { id: 't5_7', de: 'der Koch', uz: 'oshpaz erkak' },
+          { id: 't5_8', de: 'die Köchin', uz: 'oshpaz ayol' },
+          { id: 't5_9', de: 'der Verkäufer', uz: 'sotuvchi' },
+          { id: 't5_10', de: 'die Verkäuferin', uz: 'sotuvchi ayol' },
+          { id: 't5_11', de: 'der Fahrer', uz: 'haydovchi' },
+          { id: 't5_12', de: 'der Mechaniker', uz: 'mexanik' },
+          { id: 't5_13', de: 'der Ingenieur', uz: 'muhandis' },
+          { id: 't5_14', de: 'die Ingenieurin', uz: 'muhandis ayol' },
+          { id: 't5_15', de: 'der Kellner', uz: 'ofitsiant' },
+          { id: 't5_16', de: 'die Kellnerin', uz: 'ofitsiant ayol' },
+          { id: 't5_17', de: 'der Polizist', uz: 'politsiyachi' },
+          { id: 't5_18', de: 'die Pflegekraft', uz: 'parvarish xodimi' },
+          { id: 't5_19', de: 'der Beruf', uz: 'kasb' },
+          { id: 't5_20', de: 'arbeiten', uz: 'ishlamoq' },
+          { id: 't5_21', de: 'lernen', uz: "o'rganmoq" },
+          { id: 't5_22', de: 'verdienen', uz: 'pul topmoq' },
+          { id: 't5_23', de: 'die Arbeit', uz: 'ish' }
+        ]
+      },
+      {
+        id: 'topic-6',
+        number: 6,
+        deTitle: 'Länder und Sprachen',
+        uzTitle: 'Davlatlar va tillar',
+        icon: '🌍',
+        words: [
+          { id: 't6_1', de: 'das Land', uz: 'davlat / mamlakat' },
+          { id: 't6_2', de: 'Deutschland', uz: 'Germaniya' },
+          { id: 't6_3', de: 'Österreich', uz: 'Avstriya' },
+          { id: 't6_4', de: 'die Schweiz', uz: 'Shveytsariya' },
+          { id: 't6_5', de: 'Usbekistan', uz: "O'zbekiston" },
+          { id: 't6_6', de: 'Frankreich', uz: 'Fransiya' },
+          { id: 't6_7', de: 'Italien', uz: 'Italiya' },
+          { id: 't6_8', de: 'Spanien', uz: 'Ispaniya' },
+          { id: 't6_9', de: 'die Türkei', uz: 'Turkiya' },
+          { id: 't6_10', de: 'Russland', uz: 'Rossiya' },
+          { id: 't6_11', de: 'England', uz: 'Angliya' },
+          { id: 't6_12', de: 'Europa', uz: 'Yevropa' },
+          { id: 't6_13', de: 'Asien', uz: 'Osiyo' },
+          { id: 't6_14', de: 'die Sprache', uz: 'til' },
+          { id: 't6_15', de: 'Deutsch', uz: 'nemis tili' },
+          { id: 't6_16', de: 'Usbekisch', uz: "o'zbek tili" },
+          { id: 't6_17', de: 'Englisch', uz: 'ingliz tili' },
+          { id: 't6_18', de: 'Russisch', uz: 'rus tili' },
+          { id: 't6_19', de: 'Türkisch', uz: 'turk tili' },
+          { id: 't6_20', de: 'sprechen', uz: 'gapirmoq' },
+          { id: 't6_21', de: 'verstehen', uz: 'tushunmoq' },
+          { id: 't6_22', de: 'buchstabieren', uz: 'harflab aytmoq' },
+          { id: 't6_23', de: 'kommen aus', uz: '...dan kelmoq' },
+          { id: 't6_24', de: 'wohnen', uz: 'yashamoq' }
+        ]
+      },
+      {
+        id: 'topic-7',
+        number: 7,
+        deTitle: 'Schule und Lernen',
+        uzTitle: "Maktab va ta'lim",
+        icon: '🎓',
+        words: [
+          { id: 't7_1', de: 'die Schule', uz: 'maktab' },
+          { id: 't7_2', de: 'der Unterricht', uz: 'dars' },
+          { id: 't7_3', de: 'der Kurs', uz: 'kurs' },
+          { id: 't7_4', de: 'der Lehrer', uz: "o'qituvchi" },
+          { id: 't7_5', de: 'die Klasse', uz: 'sinf' },
+          { id: 't7_6', de: 'das Buch', uz: 'kitob' },
+          { id: 't7_7', de: 'das Heft', uz: 'daftar' },
+          { id: 't7_8', de: 'der Stift', uz: 'ruchka' },
+          { id: 't7_9', de: 'der Bleistift', uz: 'qalam' },
+          { id: 't7_10', de: 'das Papier', uz: "qog'oz" },
+          { id: 't7_11', de: 'die Aufgabe', uz: 'vazifa' },
+          { id: 't7_12', de: 'die Hausaufgabe', uz: 'uy vazifasi' },
+          { id: 't7_13', de: 'die Frage', uz: 'savol' },
+          { id: 't7_14', de: 'die Antwort', uz: 'javob' },
+          { id: 't7_15', de: 'die Prüfung', uz: 'imtihon' },
+          { id: 't7_16', de: 'die Grammatik', uz: 'grammatika' },
+          { id: 't7_17', de: 'das Wörterbuch', uz: "lug'at" },
+          { id: 't7_18', de: 'lesen', uz: "o'qimoq" },
+          { id: 't7_19', de: 'schreiben', uz: 'yozmoq' },
+          { id: 't7_20', de: 'lernen', uz: "o'rganmoq" },
+          { id: 't7_21', de: 'üben', uz: 'mashq qilmoq' },
+          { id: 't7_22', de: 'wiederholen', uz: 'takrorlamoq' },
+          { id: 't7_23', de: 'richtig', uz: "to'g'ri" },
+          { id: 't7_24', de: 'falsch', uz: "noto'g'ri" }
+        ]
+      },
+      {
+        id: 'topic-8',
+        number: 8,
+        deTitle: 'Lebensmittel',
+        uzTitle: 'Oziq-ovqat',
+        icon: '🍎',
+        words: [
+          { id: 't8_1', de: 'das Brot', uz: 'non' },
+          { id: 't8_2', de: 'das Brötchen', uz: 'bulochka' },
+          { id: 't8_3', de: 'die Butter', uz: "sariyog'" },
+          { id: 't8_4', de: 'der Käse', uz: 'pishloq' },
+          { id: 't8_5', de: 'die Milch', uz: 'sut' },
+          { id: 't8_6', de: 'das Ei', uz: 'tuxum' },
+          { id: 't8_7', de: 'das Fleisch', uz: "go'sht" },
+          { id: 't8_8', de: 'das Hähnchen', uz: "tovuq go'shti" },
+          { id: 't8_9', de: 'der Fisch', uz: 'baliq' },
+          { id: 't8_10', de: 'der Reis', uz: 'guruch' },
+          { id: 't8_11', de: 'die Nudeln', uz: 'makaron' },
+          { id: 't8_12', de: 'die Kartoffel', uz: 'kartoshka' },
+          { id: 't8_13', de: 'die Suppe', uz: "sho'rva" },
+          { id: 't8_14', de: 'der Salat', uz: 'salat' },
+          { id: 't8_15', de: 'das Gemüse', uz: 'sabzavot' },
+          { id: 't8_16', de: 'das Obst', uz: 'meva' },
+          { id: 't8_17', de: 'der Zucker', uz: 'shakar' },
+          { id: 't8_18', de: 'das Salz', uz: 'tuz' },
+          { id: 't8_19', de: 'das Öl', uz: "yog'" },
+          { id: 't8_20', de: 'der Kuchen', uz: 'pirog' },
+          { id: 't8_21', de: 'die Schokolade', uz: 'shokolad' },
+          { id: 't8_22', de: 'der Apfel', uz: 'olma' },
+          { id: 't8_23', de: 'die Banane', uz: 'banan' },
+          { id: 't8_24', de: 'die Tomate', uz: 'pomidor' },
+          { id: 't8_25', de: 'die Gurke', uz: 'bodring' },
+          { id: 't8_26', de: 'essen', uz: 'yemoq' },
+          { id: 't8_27', de: 'kochen', uz: 'ovqat pishirmoq' }
+        ]
+      },
+      {
+        id: 'topic-9',
+        number: 9,
+        deTitle: 'Getränke',
+        uzTitle: 'Ichimliklar',
+        icon: '☕',
+        words: [
+          { id: 't9_1', de: 'das Wasser', uz: 'suv' },
+          { id: 't9_2', de: 'das Mineralwasser', uz: 'mineral suv' },
+          { id: 't9_3', de: 'der Tee', uz: 'choy' },
+          { id: 't9_4', de: 'der Kaffee', uz: 'qahva' },
+          { id: 't9_5', de: 'der Saft', uz: 'sharbat' },
+          { id: 't9_6', de: 'die Limonade', uz: 'limonad' },
+          { id: 't9_7', de: 'die Cola', uz: 'kola' },
+          { id: 't9_8', de: 'der Kakao', uz: 'kakao' },
+          { id: 't9_9', de: 'trinken', uz: 'ichmoq' },
+          { id: 't9_10', de: 'durstig', uz: 'changagan' },
+          { id: 't9_11', de: 'die Flasche', uz: 'shisha / butilka' },
+          { id: 't9_12', de: 'das Glas', uz: 'stakan' },
+          { id: 't9_13', de: 'die Tasse', uz: 'piyola / finjon' }
+        ]
+      },
+      {
+        id: 'topic-10',
+        number: 10,
+        deTitle: 'Kleidung',
+        uzTitle: 'Kiyim-kechak',
+        icon: '👕',
+        words: [
+          { id: 't10_1', de: 'die Kleidung', uz: 'kiyim-kechak' },
+          { id: 't10_2', de: 'das Hemd', uz: "ko'ylak" },
+          { id: 't10_3', de: 'das T-Shirt', uz: 'futbolka' },
+          { id: 't10_4', de: 'die Hose', uz: 'shim' },
+          { id: 't10_5', de: 'die Jeans', uz: 'jinsi shim' },
+          { id: 't10_6', de: 'der Rock', uz: 'yubka' },
+          { id: 't10_7', de: 'das Kleid', uz: "ko'ylak" },
+          { id: 't10_8', de: 'die Jacke', uz: 'kurtka' },
+          { id: 't10_9', de: 'der Mantel', uz: 'palto' },
+          { id: 't10_10', de: 'der Pullover', uz: 'sviter' },
+          { id: 't10_11', de: 'der Schuh / die Schuhe', uz: 'poyabzal / oyoq kiyim' },
+          { id: 't10_12', de: 'die Socke', uz: 'paypoq' },
+          { id: 't10_13', de: 'die Mütze', uz: 'shapka' },
+          { id: 't10_14', de: 'der Hut', uz: 'shlyapa' },
+          { id: 't10_15', de: 'der Schal', uz: 'sharf' },
+          { id: 't10_16', de: 'die Tasche', uz: 'sumka' },
+          { id: 't10_17', de: 'tragen', uz: 'kiymoq / olib yurmoq' },
+          { id: 't10_18', de: 'anziehen', uz: 'kiyib olmoq' },
+          { id: 't10_19', de: 'ausziehen', uz: 'yechmoq' },
+          { id: 't10_20', de: 'passen', uz: 'mos kelmoq' },
+          { id: 't10_21', de: 'teuer', uz: 'qimmat' },
+          { id: 't10_22', de: 'billig', uz: 'arzon' }
+        ]
+      },
+      {
+        id: 'topic-11',
+        number: 11,
+        deTitle: 'Körper',
+        uzTitle: "Tana a'zolari",
+        icon: '🧍',
+        words: [
+          { id: 't11_1', de: 'der Körper', uz: 'tana' },
+          { id: 't11_2', de: 'der Kopf', uz: 'bosh' },
+          { id: 't11_3', de: 'das Gesicht', uz: 'yuz' },
+          { id: 't11_4', de: 'das Haar', uz: 'soch' },
+          { id: 't11_5', de: 'das Auge', uz: "ko'z" },
+          { id: 't11_6', de: 'das Ohr', uz: 'quloq' },
+          { id: 't11_7', de: 'die Nase', uz: 'burun' },
+          { id: 't11_8', de: 'der Mund', uz: "og'iz" },
+          { id: 't11_9', de: 'der Zahn', uz: 'tish' },
+          { id: 't11_10', de: 'der Hals', uz: "bo'yin / tomoq" },
+          { id: 't11_11', de: 'die Schulter', uz: 'yelka' },
+          { id: 't11_12', de: 'der Arm', uz: "qo'l" },
+          { id: 't11_13', de: 'die Hand', uz: "kaft / qo'l" },
+          { id: 't11_14', de: 'der Finger', uz: 'barmoq' },
+          { id: 't11_15', de: 'der Bauch', uz: 'qorin' },
+          { id: 't11_16', de: 'der Rücken', uz: 'orqa' },
+          { id: 't11_17', de: 'das Bein', uz: 'oyoq' },
+          { id: 't11_18', de: 'das Knie', uz: 'tizza' },
+          { id: 't11_19', de: 'der Fuß', uz: 'oyoq panjasi' },
+          { id: 't11_20', de: 'das Herz', uz: 'yurak' },
+          { id: 't11_21', de: 'weh tun', uz: "og'rimoq" }
+        ]
+      },
+      {
+        id: 'topic-12',
+        number: 12,
+        deTitle: 'Gesundheit',
+        uzTitle: "Sog'liq",
+        icon: '🩺',
+        words: [
+          { id: 't12_1', de: 'gesund', uz: "sog'lom" },
+          { id: 't12_2', de: 'krank', uz: 'kasal' },
+          { id: 't12_3', de: 'die Gesundheit', uz: "sog'liq" },
+          { id: 't12_4', de: 'der Arzt / die Ärztin', uz: 'shifokor / ayol shifokor' },
+          { id: 't12_5', de: 'die Apotheke', uz: 'dorixona' },
+          { id: 't12_6', de: 'das Krankenhaus', uz: 'kasalxona' },
+          { id: 't12_7', de: 'die Medizin', uz: 'dori' },
+          { id: 't12_8', de: 'die Tablette', uz: 'tabletka' },
+          { id: 't12_9', de: 'der Schmerz', uz: "og'riq" },
+          { id: 't12_10', de: 'Kopfschmerzen', uz: "bosh og'rig'i" },
+          { id: 't12_11', de: 'Bauchschmerzen', uz: "qorin og'rig'i" },
+          { id: 't12_12', de: 'das Fieber', uz: 'isitma' },
+          { id: 't12_13', de: 'der Husten', uz: "yo'tal" },
+          { id: 't12_14', de: 'die Erkältung', uz: 'shamollash' },
+          { id: 't12_15', de: 'müde', uz: 'charchagan' },
+          { id: 't12_16', de: 'helfen', uz: 'yordam bermoq' },
+          { id: 't12_17', de: 'schlafen', uz: 'uxlamoq' },
+          { id: 't12_18', de: 'sich fühlen', uz: "o'zini his qilmoq" }
+        ]
+      },
+      {
+        id: 'topic-13',
+        number: 13,
+        deTitle: 'Wohnung und Zimmer',
+        uzTitle: 'Uy va xonalar',
+        icon: '🏠',
+        words: [
+          { id: 't13_1', de: 'die Wohnung', uz: 'kvartira / uy' },
+          { id: 't13_2', de: 'das Haus', uz: 'uy' },
+          { id: 't13_3', de: 'das Zimmer', uz: 'xona' },
+          { id: 't13_4', de: 'das Wohnzimmer', uz: 'mehmonxona' },
+          { id: 't13_5', de: 'das Schlafzimmer', uz: 'yotoqxona' },
+          { id: 't13_6', de: 'die Küche', uz: 'oshxona' },
+          { id: 't13_7', de: 'das Bad', uz: 'hammom' },
+          { id: 't13_8', de: 'die Toilette', uz: 'hojatxona' },
+          { id: 't13_9', de: 'der Flur', uz: "yo'lak" },
+          { id: 't13_10', de: 'der Balkon', uz: 'balkon' },
+          { id: 't13_11', de: 'die Tür', uz: 'eshik' },
+          { id: 't13_12', de: 'das Fenster', uz: 'deraza' },
+          { id: 't13_13', de: 'die Wand', uz: 'devor' },
+          { id: 't13_14', de: 'der Boden', uz: 'pol' },
+          { id: 't13_15', de: 'die Treppe', uz: 'zina' },
+          { id: 't13_16', de: 'der Garten', uz: "bog'" },
+          { id: 't13_17', de: 'die Adresse', uz: 'manzil' },
+          { id: 't13_18', de: 'mieten', uz: 'ijaraga olmoq' },
+          { id: 't13_19', de: 'sauber', uz: 'toza' },
+          { id: 't13_20', de: 'schmutzig', uz: 'iflos' }
+        ]
+      },
+      {
+        id: 'topic-14',
+        number: 14,
+        deTitle: 'Möbel und Haushalt',
+        uzTitle: "Mebel va ro'zg'or",
+        icon: '🛋️',
+        words: [
+          { id: 't14_1', de: 'der Tisch', uz: 'stol' },
+          { id: 't14_2', de: 'der Stuhl', uz: 'stul' },
+          { id: 't14_3', de: 'das Sofa', uz: 'divan' },
+          { id: 't14_4', de: 'das Bett', uz: 'karavot' },
+          { id: 't14_5', de: 'der Schrank', uz: 'shkaf' },
+          { id: 't14_6', de: 'das Regal', uz: 'tokcha' },
+          { id: 't14_7', de: 'die Lampe', uz: 'chiroq' },
+          { id: 't14_8', de: 'der Spiegel', uz: "ko'zgu" },
+          { id: 't14_9', de: 'der Kühlschrank', uz: 'muzlatkich' },
+          { id: 't14_10', de: 'der Herd', uz: 'plita' },
+          { id: 't14_11', de: 'die Waschmaschine', uz: 'kir yuvish mashinasi' },
+          { id: 't14_12', de: 'der Teppich', uz: 'gilam' },
+          { id: 't14_13', de: 'die Uhr', uz: 'soat' },
+          { id: 't14_14', de: 'das Bild', uz: 'rasm' },
+          { id: 't14_15', de: 'der Schlüssel', uz: 'kalit' },
+          { id: 't14_16', de: 'aufräumen', uz: "yig'ishtirmoq" },
+          { id: 't14_17', de: 'putzen', uz: 'tozalamoq' },
+          { id: 't14_18', de: 'öffnen', uz: 'ochmoq' },
+          { id: 't14_19', de: 'schließen', uz: 'yopmoq' }
+        ]
+      },
+      {
+        id: 'topic-15',
+        number: 15,
+        deTitle: "Tiere",
+        uzTitle: "Hayvonlar",
+        icon: '🐾',
+        words: [
+          { id: 't15_1', de: "das Tier", uz: "hayvon" },
+          { id: 't15_2', de: "der Hund", uz: "it" },
+          { id: 't15_3', de: "die Katze", uz: "mushuk" },
+          { id: 't15_4', de: "der Vogel", uz: "qush" },
+          { id: 't15_5', de: "das Pferd", uz: "ot" },
+          { id: 't15_6', de: "die Kuh", uz: "sigir" },
+          { id: 't15_7', de: "das Schaf", uz: "qo'y" },
+          { id: 't15_8', de: "die Ziege", uz: "echki" },
+          { id: 't15_9', de: "das Huhn", uz: "tovuq" },
+          { id: 't15_10', de: "der Hahn", uz: "xo'roz" },
+          { id: 't15_11', de: "die Ente", uz: "o'rdak" },
+          { id: 't15_12', de: "der Bär", uz: "ayiq" },
+          { id: 't15_13', de: "der Löwe", uz: "sher" },
+          { id: 't15_14', de: "der Elefant", uz: "fil" },
+          { id: 't15_15', de: "die Maus", uz: "sichqon" },
+          { id: 't15_16', de: "das Kaninchen", uz: "quyon" },
+          { id: 't15_17', de: "füttern", uz: "ovqat bermoq" },
+          { id: 't15_18', de: "laufen", uz: "yugurmoq / yurmoq" }
+        ]
+      },
+      {
+        id: 'topic-16',
+        number: 16,
+        deTitle: "Verkehr und Transport",
+        uzTitle: "Transport",
+        icon: '🚗',
+        words: [
+          { id: 't16_1', de: "das Auto", uz: "mashina" },
+          { id: 't16_2', de: "der Bus", uz: "avtobus" },
+          { id: 't16_3', de: "der Zug", uz: "poyezd" },
+          { id: 't16_4', de: "die Bahn", uz: "temiryo'l" },
+          { id: 't16_5', de: "das Fahrrad", uz: "velosiped" },
+          { id: 't16_6', de: "das Motorrad", uz: "mototsikl" },
+          { id: 't16_7', de: "das Taxi", uz: "taksi" },
+          { id: 't16_8', de: "das Flugzeug", uz: "samolyot" },
+          { id: 't16_9', de: "der Bahnhof", uz: "vokzal" },
+          { id: 't16_10', de: "die Haltestelle", uz: "bekat" },
+          { id: 't16_11', de: "der Flughafen", uz: "aeroport" },
+          { id: 't16_12', de: "die Straße", uz: "ko'cha / yo'l" },
+          { id: 't16_13', de: "die Ampel", uz: "svetofor" },
+          { id: 't16_14', de: "das Ticket", uz: "chipta" },
+          { id: 't16_15', de: "die Fahrkarte", uz: "yo'l chiptasi" },
+          { id: 't16_16', de: "fahren", uz: "transportda bormoq" },
+          { id: 't16_17', de: "einsteigen", uz: "transportga chiqmoq" },
+          { id: 't16_18', de: "aussteigen", uz: "transportdan tushmoq" },
+          { id: 't16_19', de: "abfahren", uz: "jo'nab ketmoq" },
+          { id: 't16_20', de: "ankommen", uz: "yetib kelmoq" }
+        ]
+      },
+      {
+        id: 'topic-17',
+        number: 17,
+        deTitle: "Reisen",
+        uzTitle: "Sayohat",
+        icon: '✈️',
+        words: [
+          { id: 't17_1', de: "die Reise", uz: "sayohat" },
+          { id: 't17_2', de: "reisen", uz: "sayohat qilmoq" },
+          { id: 't17_3', de: "der Urlaub", uz: "ta'til" },
+          { id: 't17_4', de: "das Hotel", uz: "mehmonxona" },
+          { id: 't17_5', de: "die Jugendherberge", uz: "yoshlar yotoqxonasi" },
+          { id: 't17_6', de: "die Reservierung", uz: "bron" },
+          { id: 't17_7', de: "der Pass", uz: "pasport" },
+          { id: 't17_8', de: "der Koffer", uz: "chamadon" },
+          { id: 't17_9', de: "die Karte", uz: "xarita / karta" },
+          { id: 't17_10', de: "das Meer", uz: "dengiz" },
+          { id: 't17_11', de: "der Strand", uz: "sohil" },
+          { id: 't17_12', de: "der Berg", uz: "tog'" },
+          { id: 't17_13', de: "die Stadt", uz: "shahar" },
+          { id: 't17_14', de: "das Dorf", uz: "qishloq" },
+          { id: 't17_15', de: "besuchen", uz: "tashrif buyurmoq" },
+          { id: 't17_16', de: "buchen", uz: "bron qilmoq" },
+          { id: 't17_17', de: "übernachten", uz: "tunab qolmoq" },
+          { id: 't17_18', de: "abholen", uz: "kutib olmoq" },
+          { id: 't17_19', de: "die Information", uz: "ma'lumot" }
+        ]
+      },
+      {
+        id: 'topic-18',
+        number: 18,
+        deTitle: "Tagesablauf",
+        uzTitle: "Kun tartibi",
+        icon: '⏰',
+        words: [
+          { id: 't18_1', de: "aufstehen", uz: "o'rindan turmoq" },
+          { id: 't18_2', de: "aufwachen", uz: "uyg'onmoq" },
+          { id: 't18_3', de: "duschen", uz: "dush qabul qilmoq" },
+          { id: 't18_4', de: "sich waschen", uz: "yuvinmoq" },
+          { id: 't18_5', de: "frühstücken", uz: "nonushta qilmoq" },
+          { id: 't18_6', de: "einkaufen", uz: "xarid qilmoq" },
+          { id: 't18_7', de: "nach Hause gehen", uz: "uyga bormoq" },
+          { id: 't18_8', de: "fernsehen", uz: "televizor ko'rmoq" },
+          { id: 't18_9', de: "Musik hören", uz: "musiqa tinglamoq" },
+          { id: 't18_10', de: "schlafen gehen", uz: "uxlashga yotmoq" },
+          { id: 't18_11', de: "der Alltag", uz: "kundalik hayot" },
+          { id: 't18_12', de: "der Morgen", uz: "ertalab" },
+          { id: 't18_13', de: "der Vormittag", uz: "tushgacha" },
+          { id: 't18_14', de: "der Mittag", uz: "tush payti" },
+          { id: 't18_15', de: "der Nachmittag", uz: "tushdan keyin" },
+          { id: 't18_16', de: "der Abend", uz: "kechqurun" },
+          { id: 't18_17', de: "die Nacht", uz: "tun" }
+        ]
+      },
+      {
+        id: 'topic-19',
+        number: 19,
+        deTitle: "Uhrzeit und Kalender",
+        uzTitle: "Vaqt va kalendar",
+        icon: '📅',
+        words: [
+          { id: 't19_1', de: "die Uhr", uz: "soat" },
+          { id: 't19_2', de: "die Uhrzeit", uz: "vaqt" },
+          { id: 't19_3', de: "die Stunde", uz: "soat (60 daqiqa)" },
+          { id: 't19_4', de: "die Minute", uz: "daqiqa" },
+          { id: 't19_5', de: "die Sekunde", uz: "soniya" },
+          { id: 't19_6', de: "heute", uz: "bugun" },
+          { id: 't19_7', de: "morgen", uz: "ertaga" },
+          { id: 't19_8', de: "gestern", uz: "kecha" },
+          { id: 't19_9', de: "jetzt", uz: "hozir" },
+          { id: 't19_10', de: "später", uz: "keyinroq" },
+          { id: 't19_11', de: "früh", uz: "erta" },
+          { id: 't19_12', de: "spät", uz: "kech" },
+          { id: 't19_13', de: "immer", uz: "har doim" },
+          { id: 't19_14', de: "oft", uz: "tez-tez" },
+          { id: 't19_15', de: "manchmal", uz: "ba'zan" },
+          { id: 't19_16', de: "nie", uz: "hech qachon" },
+          { id: 't19_17', de: "die Woche", uz: "hafta" },
+          { id: 't19_18', de: "der Monat", uz: "oy" },
+          { id: 't19_19', de: "das Jahr", uz: "yil" },
+          { id: 't19_20', de: "der Montag", uz: "dushanba" },
+          { id: 't19_21', de: "der Dienstag", uz: "seshanba" },
+          { id: 't19_22', de: "der Mittwoch", uz: "chorshanba" },
+          { id: 't19_23', de: "der Donnerstag", uz: "payshanba" },
+          { id: 't19_24', de: "der Freitag", uz: "juma" },
+          { id: 't19_25', de: "der Samstag", uz: "shanba" },
+          { id: 't19_26', de: "der Sonntag", uz: "yakshanba" },
+          { id: 't19_27', de: "Januar", uz: "yanvar" },
+          { id: 't19_28', de: "Februar", uz: "fevral" },
+          { id: 't19_29', de: "März", uz: "mart" },
+          { id: 't19_30', de: "April", uz: "aprel" },
+          { id: 't19_31', de: "Mai", uz: "may" },
+          { id: 't19_32', de: "Juni", uz: "iyun" },
+          { id: 't19_33', de: "Juli", uz: "iyul" },
+          { id: 't19_34', de: "August", uz: "avgust" },
+          { id: 't19_35', de: "September", uz: "sentabr" },
+          { id: 't19_36', de: "Oktober", uz: "oktabr" },
+          { id: 't19_37', de: "November", uz: "noyabr" },
+          { id: 't19_38', de: "Dezember", uz: "dekabr" }
+        ]
+      },
+      {
+        id: 'topic-20',
+        number: 20,
+        deTitle: "Wetter und Natur",
+        uzTitle: "Ob-havo va tabiat",
+        icon: '🌳',
+        words: [
+          { id: 't20_1', de: "das Wetter", uz: "ob-havo" },
+          { id: 't20_2', de: "die Sonne", uz: "quyosh" },
+          { id: 't20_3', de: "der Regen", uz: "yomg'ir" },
+          { id: 't20_4', de: "der Schnee", uz: "qor" },
+          { id: 't20_5', de: "der Wind", uz: "shamol" },
+          { id: 't20_6', de: "die Wolke", uz: "bulut" },
+          { id: 't20_7', de: "der Himmel", uz: "osmon" },
+          { id: 't20_8', de: "warm", uz: "iliq" },
+          { id: 't20_9', de: "heiß", uz: "issiq" },
+          { id: 't20_10', de: "kalt", uz: "sovuq" },
+          { id: 't20_11', de: "kühl", uz: "salqin" },
+          { id: 't20_12', de: "sonnig", uz: "quyoshli" },
+          { id: 't20_13', de: "windig", uz: "shamolli" },
+          { id: 't20_14', de: "regnerisch", uz: "yomg'irli" },
+          { id: 't20_15', de: "bewölkt", uz: "bulutli" },
+          { id: 't20_16', de: "es regnet", uz: "yomg'ir yog'moqda" },
+          { id: 't20_17', de: "es schneit", uz: "qor yog'moqda" },
+          { id: 't20_18', de: "der Baum", uz: "daraxt" },
+          { id: 't20_19', de: "die Blume", uz: "gul" },
+          { id: 't20_20', de: "der Wald", uz: "o'rmon" },
+          { id: 't20_21', de: "der Fluss", uz: "daryo" },
+          { id: 't20_22', de: "der See", uz: "ko'l" },
+          { id: 't20_23', de: "die Natur", uz: "tabiat" }
+        ]
+      },
+      {
+        id: 'topic-21',
+        number: 21,
+        deTitle: "Freizeit und Hobbys",
+        uzTitle: "Bo‘sh vaqt va hobbi",
+        icon: '🎨',
+        words: [
+          { id: 't21_1', de: "die Freizeit", uz: "bo'sh vaqt" },
+          { id: 't21_2', de: "das Hobby", uz: "hobbi" },
+          { id: 't21_3', de: "tanzen", uz: "raqsga tushmoq" },
+          { id: 't21_4', de: "singen", uz: "kuylamoq" },
+          { id: 't21_5', de: "malen", uz: "rasm chizmoq" },
+          { id: 't21_6', de: "fotografieren", uz: "suratga olmoq" },
+          { id: 't21_7', de: "spielen", uz: "o'ynamoq" },
+          { id: 't21_8', de: "spazieren gehen", uz: "sayr qilmoq" },
+          { id: 't21_9', de: "Freunde treffen", uz: "do'stlar bilan uchrashmoq" },
+          { id: 't21_10', de: "das Spiel", uz: "o'yin" },
+          { id: 't21_11', de: "der Film", uz: "film" },
+          { id: 't21_12', de: "das Foto", uz: "surat" }
+        ]
+      },
+      {
+        id: 'topic-22',
+        number: 22,
+        deTitle: "Sport",
+        uzTitle: "Sport",
+        icon: '⚽',
+        words: [
+          { id: 't22_1', de: "Fußball", uz: "futbol" },
+          { id: 't22_2', de: "Basketball", uz: "basketbol" },
+          { id: 't22_3', de: "Tennis", uz: "tennis" },
+          { id: 't22_4', de: "Schwimmen", uz: "suzish" },
+          { id: 't22_5', de: "Laufen", uz: "yugurish" },
+          { id: 't22_6', de: "der Ball", uz: "to'p" },
+          { id: 't22_7', de: "die Mannschaft", uz: "jamoa" },
+          { id: 't22_8', de: "der Spieler", uz: "o'yinchi" },
+          { id: 't22_9', de: "der Trainer", uz: "murabbiy" },
+          { id: 't22_10', de: "gewinnen", uz: "yutmoq" },
+          { id: 't22_11', de: "verlieren", uz: "yutqazmoq" },
+          { id: 't22_12', de: "trainieren", uz: "mashq qilmoq" },
+          { id: 't22_13', de: "fit", uz: "jismonan chiniqqan" },
+          { id: 't22_14', de: "stark", uz: "kuchli" },
+          { id: 't22_15', de: "schnell", uz: "tez" }
+        ]
+      },
+      {
+        id: 'topic-23',
+        number: 23,
+        deTitle: "Einkaufen und Geld",
+        uzTitle: "Xarid va pul",
+        icon: '🛒',
+        words: [
+          { id: 't23_1', de: "das Geschäft", uz: "do'kon" },
+          { id: 't23_2', de: "der Supermarkt", uz: "supermarket" },
+          { id: 't23_3', de: "der Markt", uz: "bozor" },
+          { id: 't23_4', de: "der Preis", uz: "narx" },
+          { id: 't23_5', de: "das Geld", uz: "pul" },
+          { id: 't23_6', de: "der Euro", uz: "yevro" },
+          { id: 't23_7', de: "die Kasse", uz: "kassa" },
+          { id: 't23_8', de: "die Rechnung", uz: "hisob" },
+          { id: 't23_9', de: "die Quittung", uz: "kvitansiya" },
+          { id: 't23_10', de: "der Rabatt", uz: "chegirma" },
+          { id: 't23_11', de: "kosten", uz: "narxi bo'lmoq" },
+          { id: 't23_12', de: "bezahlen", uz: "to'lamoq" },
+          { id: 't23_13', de: "bar", uz: "naqd" },
+          { id: 't23_14', de: "mit Karte", uz: "karta orqali" },
+          { id: 't23_15', de: "günstig", uz: "hamyonbop" },
+          { id: 't23_16', de: "suchen", uz: "qidirmoq" },
+          { id: 't23_17', de: "finden", uz: "topmoq" },
+          { id: 't23_18', de: "brauchen", uz: "kerak bo'lmoq" }
+        ]
+      },
+      {
+        id: 'topic-24',
+        number: 24,
+        deTitle: "Stadt und Orte",
+        uzTitle: "Shahar va joylar",
+        icon: '🏙️',
+        words: [
+          { id: 't24_1', de: "das Zentrum", uz: "markaz" },
+          { id: 't24_2', de: "der Platz", uz: "maydon" },
+          { id: 't24_3', de: "der Park", uz: "bog'" },
+          { id: 't24_4', de: "die Bank", uz: "bank" },
+          { id: 't24_5', de: "die Post", uz: "pochta" },
+          { id: 't24_6', de: "die Polizei", uz: "politsiya" },
+          { id: 't24_7', de: "die Universität", uz: "universitet" },
+          { id: 't24_8', de: "das Restaurant", uz: "restoran" },
+          { id: 't24_9', de: "das Café", uz: "kafe" },
+          { id: 't24_10', de: "die Bäckerei", uz: "nonvoyxona" },
+          { id: 't24_11', de: "die Metzgerei", uz: "go'sht do'koni" },
+          { id: 't24_12', de: "die Bibliothek", uz: "kutubxona" },
+          { id: 't24_13', de: "das Kino", uz: "kinoteatr" },
+          { id: 't24_14', de: "das Museum", uz: "muzey" },
+          { id: 't24_15', de: "die Kirche", uz: "cherkov" },
+          { id: 't24_16', de: "die Moschee", uz: "masjid" },
+          { id: 't24_17', de: "hier", uz: "bu yerda" },
+          { id: 't24_18', de: "dort", uz: "u yerda" },
+          { id: 't24_19', de: "links", uz: "chapda" },
+          { id: 't24_20', de: "rechts", uz: "o'ngda" },
+          { id: 't24_21', de: "geradeaus", uz: "to'g'riga" }
+        ]
+      },
+      {
+        id: 'topic-25',
+        number: 25,
+        deTitle: "Adjektive",
+        uzTitle: "Sifatlar",
+        icon: '🔠',
+        words: [
+          { id: 't25_1', de: "gut", uz: "yaxshi" },
+          { id: 't25_2', de: "schlecht", uz: "yomon" },
+          { id: 't25_3', de: "groß", uz: "katta (baland)" },
+          { id: 't25_4', de: "klein", uz: "kichik" },
+          { id: 't25_5', de: "lang", uz: "uzun" },
+          { id: 't25_6', de: "kurz", uz: "qisqa" },
+          { id: 't25_7', de: "alt", uz: "eski (qari)" },
+          { id: 't25_8', de: "jung", uz: "yosh" },
+          { id: 't25_9', de: "neu", uz: "yangi" },
+          { id: 't25_10', de: "schön", uz: "chiroyli" },
+          { id: 't25_11', de: "hässlich", uz: "xunuk" },
+          { id: 't25_12', de: "leicht", uz: "yengil (oson)" },
+          { id: 't25_13', de: "schwer", uz: "og'ir (qiyin)" },
+          { id: 't25_14', de: "einfach", uz: "oson" },
+          { id: 't25_15', de: "schwierig", uz: "qiyin" },
+          { id: 't25_16', de: "schnell", uz: "tez" },
+          { id: 't25_17', de: "langsam", uz: "sekin" },
+          { id: 't25_18', de: "interessant", uz: "qiziqarli" },
+          { id: 't25_19', de: "langweilig", uz: "zerikarli" },
+          { id: 't25_20', de: "freundlich", uz: "samimiy" },
+          { id: 't25_21', de: "nett", uz: "yoqimli" },
+          { id: 't25_22', de: "müde", uz: "charchagan" },
+          { id: 't25_23', de: "glücklich", uz: "baxtli" },
+          { id: 't25_24', de: "traurig", uz: "xafa" },
+          { id: 't25_25', de: "hungrig", uz: "och" },
+          { id: 't25_26', de: "wichtig", uz: "muhim" },
+          { id: 't25_27', de: "richtig", uz: "to'g'ri" },
+          { id: 't25_28', de: "falsch", uz: "noto'g'ri" }
+        ]
+      },
+      {
+        id: 'topic-26',
+        number: 26,
+        deTitle: "Häufige Verben",
+        uzTitle: "Eng ko‘p ishlatiladigan fe’llar",
+        icon: '🔤',
+        words: [
+          { id: 't26_1', de: "sein", uz: "bo'lmoq" },
+          { id: 't26_2', de: "haben", uz: "ega bo'lmoq" },
+          { id: 't26_3', de: "werden", uz: "aylanmoq" },
+          { id: 't26_4', de: "machen", uz: "qilmoq" },
+          { id: 't26_5', de: "gehen", uz: "bormoq" },
+          { id: 't26_6', de: "kommen", uz: "kelmoq" },
+          { id: 't26_7', de: "fahren", uz: "transportda bormoq" },
+          { id: 't26_8', de: "bleiben", uz: "qolmoq" },
+          { id: 't26_9', de: "wohnen", uz: "yashamoq" },
+          { id: 't26_10', de: "leben", uz: "hayot kechirmoq" },
+          { id: 't26_11', de: "heißen", uz: "deb atalmoq" },
+          { id: 't26_12', de: "sagen", uz: "aytmoq" },
+          { id: 't26_13', de: "fragen", uz: "so'ramoq" },
+          { id: 't26_14', de: "antworten", uz: "javob bermoq" },
+          { id: 't26_15', de: "geben", uz: "bermoq" },
+          { id: 't26_16', de: "nehmen", uz: "olmoq" },
+          { id: 't26_17', de: "bringen", uz: "olib kelmoq" },
+          { id: 't26_18', de: "kaufen", uz: "sotib olmoq" },
+          { id: 't26_19', de: "verkaufen", uz: "sotmoq" },
+          { id: 't26_20', de: "bezahlen", uz: "to'lamoq" },
+          { id: 't26_21', de: "wollen", uz: "xohlamoq" },
+          { id: 't26_22', de: "können", uz: "qila olmoq" },
+          { id: 't26_23', de: "müssen", uz: "majbur bo'lmoq" },
+          { id: 't26_24', de: "dürfen", uz: "ruxsatga ega bo'lmoq" },
+          { id: 't26_25', de: "sollen", uz: "lozim bo'lmoq" },
+          { id: 't26_26', de: "wissen", uz: "bilmoq" },
+          { id: 't26_27', de: "kennen", uz: "tanish bo'lmoq" },
+          { id: 't26_28', de: "denken", uz: "o'ylamoq" },
+          { id: 't26_29', de: "glauben", uz: "ishonmoq" },
+          { id: 't26_30', de: "lieben", uz: "sevmoq" },
+          { id: 't26_31', de: "mögen", uz: "yoqtirmoq" },
+          { id: 't26_32', de: "warten", uz: "kutmoq" },
+          { id: 't26_33', de: "helfen", uz: "yordam bermoq" },
+          { id: 't26_34', de: "zeigen", uz: "ko'rsatmoq" }
+        ]
+      },
+      {
+        id: 'topic-27',
+        number: 27,
+        deTitle: "Pronomen",
+        uzTitle: "Olmoshlar",
+        icon: '👤',
+        words: [
+          { id: 't27_1', de: "ich", uz: "men" },
+          { id: 't27_2', de: "du", uz: "sen" },
+          { id: 't27_3', de: "er", uz: "u (erkak)" },
+          { id: 't27_4', de: "sie", uz: "u (ayol)" },
+          { id: 't27_5', de: "es", uz: "u (narsa)" },
+          { id: 't27_6', de: "wir", uz: "biz" },
+          { id: 't27_7', de: "ihr", uz: "sizlar" },
+          { id: 't27_8', de: "sie", uz: "ular" },
+          { id: 't27_9', de: "Sie", uz: "Siz (hurmat)" },
+          { id: 't27_10', de: "mich", uz: "meni" },
+          { id: 't27_11', de: "dich", uz: "seni" },
+          { id: 't27_12', de: "ihn", uz: "uni" },
+          { id: 't27_13', de: "uns", uz: "bizni" },
+          { id: 't27_14', de: "euch", uz: "sizlarni" },
+          { id: 't27_15', de: "mein", uz: "mening" },
+          { id: 't27_16', de: "dein", uz: "sening" },
+          { id: 't27_17', de: "sein", uz: "uning" },
+          { id: 't27_18', de: "ihr", uz: "uning" },
+          { id: 't27_19', de: "unser", uz: "bizning" },
+          { id: 't27_20', de: "euer", uz: "sizlarning" },
+          { id: 't27_21', de: "dieser", uz: "bu" },
+          { id: 't27_22', de: "jeder", uz: "har bir" },
+          { id: 't27_23', de: "man", uz: "umumiy ega" },
+          { id: 't27_24', de: "wer", uz: "kim" },
+          { id: 't27_25', de: "was", uz: "nima" }
+        ]
+      },
+      {
+        id: 'topic-28',
+        number: 28,
+        deTitle: "Präpositionen",
+        uzTitle: "Predloglar",
+        icon: '📍',
+        words: [
+          { id: 't28_1', de: "in", uz: "ichida (-da)" },
+          { id: 't28_2', de: "an", uz: "yonida" },
+          { id: 't28_3', de: "auf", uz: "ustida" },
+          { id: 't28_4', de: "unter", uz: "ostida" },
+          { id: 't28_5', de: "über", uz: "tepasida (haqida)" },
+          { id: 't28_6', de: "vor", uz: "oldida" },
+          { id: 't28_7', de: "hinter", uz: "orqasida" },
+          { id: 't28_8', de: "neben", uz: "yonida" },
+          { id: 't28_9', de: "zwischen", uz: "orasida" },
+          { id: 't28_10', de: "mit", uz: "bilan" },
+          { id: 't28_11', de: "ohne", uz: "-siz" },
+          { id: 't28_12', de: "für", uz: "uchun" },
+          { id: 't28_13', de: "von", uz: "-dan" },
+          { id: 't28_14', de: "zu", uz: "-ga" },
+          { id: 't28_15', de: "nach", uz: "(keyin)" },
+          { id: 't28_16', de: "aus", uz: "ichidan (-dan)" },
+          { id: 't28_17', de: "bei", uz: "yonida" },
+          { id: 't28_18', de: "um", uz: "atrofida" },
+          { id: 't28_19', de: "bis", uz: "-gacha" },
+          { id: 't28_20', de: "gegen", uz: "qarshi" },
+          { id: 't28_21', de: "durch", uz: "orqali" },
+          { id: 't28_22', de: "seit", uz: "-dan beri" }
+        ]
+      },
+      {
+        id: 'topic-29',
+        number: 29,
+        deTitle: "Konnektoren und Adverbien",
+        uzTitle: "Bog‘lovchi va ravishlar",
+        icon: '🔗',
+        words: [
+          { id: 't29_1', de: "und", uz: "va" },
+          { id: 't29_2', de: "oder", uz: "yoki" },
+          { id: 't29_3', de: "aber", uz: "ammo" },
+          { id: 't29_4', de: "denn", uz: "chunki" },
+          { id: 't29_5', de: "weil", uz: "chunki" },
+          { id: 't29_6', de: "dass", uz: "-ligini" },
+          { id: 't29_7', de: "wenn", uz: "agar (qachonki)" },
+          { id: 't29_8', de: "deshalb", uz: "shu sababli" },
+          { id: 't29_9', de: "dann", uz: "keyin" },
+          { id: 't29_10', de: "danach", uz: "undan keyin" },
+          { id: 't29_11', de: "zuerst", uz: "avval" },
+          { id: 't29_12', de: "auch", uz: "ham" },
+          { id: 't29_13', de: "nur", uz: "faqat" },
+          { id: 't29_14', de: "sehr", uz: "juda" },
+          { id: 't29_15', de: "zu", uz: "haddan tashqari" },
+          { id: 't29_16', de: "nicht", uz: "emas" },
+          { id: 't29_17', de: "kein", uz: "hech qanday emas" },
+          { id: 't29_18', de: "gern", uz: "bajonidil" },
+          { id: 't29_19', de: "lieber", uz: "afzal ko'rib" },
+          { id: 't29_20', de: "zusammen", uz: "birgalikda" },
+          { id: 't29_21', de: "allein", uz: "yolg'iz" },
+          { id: 't29_22', de: "noch", uz: "hali" },
+          { id: 't29_23', de: "schon", uz: "allaqachon" }
+        ]
+      },
+      {
+        id: 'topic-30',
+        number: 30,
+        deTitle: "Technik und Alltag",
+        uzTitle: "Texnika va kundalik buyumlar",
+        icon: '💻',
+        words: [
+          { id: 't30_1', de: "der Computer", uz: "kompyuter" },
+          { id: 't30_2', de: "der Laptop", uz: "noutbuk" },
+          { id: 't30_3', de: "das Handy", uz: "telefon" },
+          { id: 't30_4', de: "das Internet", uz: "internet" },
+          { id: 't30_5', de: "die E-Mail", uz: "elektron pochta" },
+          { id: 't30_6', de: "die Nachricht", uz: "xabar" },
+          { id: 't30_7', de: "das Ladegerät", uz: "quvvatlagich" },
+          { id: 't30_8', de: "die App", uz: "ilova" },
+          { id: 't30_9', de: "die Telefonnummer", uz: "telefon raqami" },
+          { id: 't30_10', de: "anrufen", uz: "qo'ng'iroq qilmoq" },
+          { id: 't30_11', de: "schicken", uz: "yubormoq" },
+          { id: 't30_12', de: "bekommen", uz: "olmoq" },
+          { id: 't30_13', de: "einschalten", uz: "yoqmoq" },
+          { id: 't30_14', de: "ausschalten", uz: "o'chirmoq" },
+          { id: 't30_15', de: "funktionieren", uz: "ishlamoq (faoliyat)" },
+          { id: 't30_16', de: "kaputt", uz: "buzilgan" },
+          { id: 't30_17', de: "neu", uz: "yangi" },
+          { id: 't30_18', de: "alt", uz: "eski" }
+        ]
+      },
+      {
+        id: 'topic-31',
+        number: 31,
+        deTitle: "Haushalt und Hausarbeit",
+        uzTitle: "Uy ishlari",
+        icon: '🧹',
+        words: [
+          { id: 't31_1', de: "der Haushalt", uz: "ro'zg'or" },
+          { id: 't31_2', de: "die Hausarbeit", uz: "uy yumushi" },
+          { id: 't31_3', de: "das Geschirr", uz: "idish-tovoq" },
+          { id: 't31_4', de: "die Spülmaschine", uz: "idish yuvish mashinasi" },
+          { id: 't31_5', de: "der Staubsauger", uz: "changyutgich" },
+          { id: 't31_6', de: "der Müll", uz: "axlat" },
+          { id: 't31_7', de: "die Mülltonne", uz: "axlat qutisi" },
+          { id: 't31_8', de: "bügeln", uz: "dazmollamoq" },
+          { id: 't31_9', de: "staubsaugen", uz: "changyutmoq" },
+          { id: 't31_10', de: "abwaschen", uz: "idish yuvmoq" },
+          { id: 't31_11', de: "den Tisch decken", uz: "dasturxon yozmoq" },
+          { id: 't31_12', de: "den Tisch abräumen", uz: "stolni yig'ishtirmoq" },
+          { id: 't31_13', de: "den Müll trennen", uz: "chiqindini saralamoq" },
+          { id: 't31_14', de: "aufhängen", uz: "ilib qo'ymoq" },
+          { id: 't31_15', de: "zusammenlegen", uz: "taxlamoq" },
+          { id: 't31_16', de: "ordentlich", uz: "tartibli" },
+          { id: 't31_17', de: "kaputtgehen", uz: "buzilib qolmoq" },
+          { id: 't31_18', de: "der Haushaltsplan", uz: "uy ishlari rejasi" }
+        ]
+      },
+      {
+        id: 'topic-32',
+        number: 32,
+        deTitle: "Ernährung und Kochen",
+        uzTitle: "Ovqatlanish va pishirish",
+        icon: '🍳',
+        words: [
+          { id: 't32_1', de: "die Ernährung", uz: "ovqatlanish" },
+          { id: 't32_2', de: "die Mahlzeit", uz: "ovqatlanish vaqti" },
+          { id: 't32_3', de: "das Frühstück", uz: "nonushta" },
+          { id: 't32_4', de: "das Mittagessen", uz: "tushlik" },
+          { id: 't32_5', de: "das Abendessen", uz: "kechki ovqat" },
+          { id: 't32_6', de: "die Zutat", uz: "masalliq" },
+          { id: 't32_7', de: "das Rezept", uz: "retsept" },
+          { id: 't32_8', de: "die Pfanne", uz: "tova" },
+          { id: 't32_9', de: "der Topf", uz: "qozon" },
+          { id: 't32_10', de: "der Backofen", uz: "duchovka" },
+          { id: 't32_11', de: "das Messer", uz: "pichoq" },
+          { id: 't32_12', de: "das Schneidebrett", uz: "taxtakach" },
+          { id: 't32_13', de: "schneiden", uz: "kesmoq" },
+          { id: 't32_14', de: "braten", uz: "qovurmoq" },
+          { id: 't32_15', de: "backen", uz: "pishirmoq" },
+          { id: 't32_16', de: "kochen lassen", uz: "qaynatib pishirmoq" },
+          { id: 't32_17', de: "mischen", uz: "aralashtirmoq" },
+          { id: 't32_18', de: "würzen", uz: "ziravor solmoq" },
+          { id: 't32_19', de: "süß", uz: "shirin" },
+          { id: 't32_20', de: "sauer", uz: "nordon" },
+          { id: 't32_21', de: "bitter", uz: "achchiq" },
+          { id: 't32_22', de: "salzig", uz: "sho'r" },
+          { id: 't32_23', de: "scharf", uz: "o'tkir" },
+          { id: 't32_24', de: "vegetarisch", uz: "vegetarian" }
+        ]
+      },
+      {
+        id: 'topic-33',
+        number: 33,
+        deTitle: "Im Restaurant",
+        uzTitle: "Restoranda",
+        icon: '🍽️',
+        words: [
+          { id: 't33_1', de: "die Speisekarte", uz: "menyu" },
+          { id: 't33_2', de: "die Bestellung", uz: "buyurtma" },
+          { id: 't33_3', de: "bestellen", uz: "buyurtma bermoq" },
+          { id: 't33_4', de: "die Vorspeise", uz: "gazak" },
+          { id: 't33_5', de: "das Hauptgericht", uz: "asosiy taom" },
+          { id: 't33_6', de: "die Nachspeise", uz: "shirinlik" },
+          { id: 't33_7', de: "die Beilage", uz: "garnir" },
+          { id: 't33_8', de: "die Portion", uz: "porsiya" },
+          { id: 't33_9', de: "die Rechnung", uz: "hisob" },
+          { id: 't33_10', de: "Trinkgeld geben", uz: "choychaqa bermoq" },
+          { id: 't33_11', de: "reservieren", uz: "joy band qilmoq" },
+          { id: 't33_12', de: "empfehlen", uz: "tavsiya qilmoq" },
+          { id: 't33_13', de: "lecker", uz: "mazali" },
+          { id: 't33_14', de: "frisch", uz: "yangi" },
+          { id: 't33_15', de: "zum Mitnehmen", uz: "olib ketish uchun" }
+        ]
+      },
+      {
+        id: 'topic-34',
+        number: 34,
+        deTitle: "Gesundheit und Arztbesuch",
+        uzTitle: "Sog‘liq va shifokor qabuli",
+        icon: '🩺',
+        words: [
+          { id: 't34_1', de: "die Untersuchung", uz: "tekshiruv" },
+          { id: 't34_2', de: "der Termin", uz: "qabul vaqti" },
+          { id: 't34_3', de: "einen Termin vereinbaren", uz: "qabulga yozilmoq" },
+          { id: 't34_4', de: "das Rezept", uz: "retsept" },
+          { id: 't34_5', de: "die Krankenkasse", uz: "tibbiy sug'urta kassasi" },
+          { id: 't34_6', de: "die Versicherung", uz: "sug'urta" },
+          { id: 't34_7', de: "die Verletzung", uz: "jarohat" },
+          { id: 't34_8', de: "die Wunde", uz: "yara" },
+          { id: 't34_9', de: "der Unfall", uz: "baxtsiz hodisa" },
+          { id: 't34_10', de: "die Grippe", uz: "gripp" },
+          { id: 't34_11', de: "die Allergie", uz: "allergiya" },
+          { id: 't34_12', de: "Zahnschmerzen", uz: "tish og'rig'i" },
+          { id: 't34_13', de: "untersuchen", uz: "tekshirmoq" },
+          { id: 't34_14', de: "verschreiben", uz: "dori yozib bermoq" },
+          { id: 't34_15', de: "sich ausruhen", uz: "dam olmoq" },
+          { id: 't34_16', de: "gesund werden", uz: "sog'aymoq" },
+          { id: 't34_17', de: "die Notaufnahme", uz: "shoshilinch yordam bo'limi" }
+        ]
+      },
+      {
+        id: 'topic-35',
+        number: 35,
+        deTitle: "Körperpflege und Kosmetik",
+        uzTitle: "Shaxsiy gigiyena",
+        icon: '🧴',
+        words: [
+          { id: 't35_1', de: "die Zahnbürste", uz: "tish cho'tkasi" },
+          { id: 't35_2', de: "die Zahnpasta", uz: "tish pastasi" },
+          { id: 't35_3', de: "die Seife", uz: "sovun" },
+          { id: 't35_4', de: "das Shampoo", uz: "shampun" },
+          { id: 't35_5', de: "das Handtuch", uz: "sochiq" },
+          { id: 't35_6', de: "die Creme", uz: "krem" },
+          { id: 't35_7', de: "sich kämmen", uz: "soch taramoq" },
+          { id: 't35_8', de: "sich rasieren", uz: "soqol olmoq" },
+          { id: 't35_9', de: "sich schminken", uz: "pardoz qilmoq" },
+          { id: 't35_10', de: "die Haut", uz: "teri" },
+          { id: 't35_11', de: "die Frisur", uz: "soch turmagi" },
+          { id: 't35_12', de: "der Friseur", uz: "sartarosh" },
+          { id: 't35_13', de: "sauber halten", uz: "toza saqlamoq" },
+          { id: 't35_14', de: "täglich", uz: "har kuni" },
+          { id: 't35_15', de: "regelmäßig", uz: "muntazam" },
+          { id: 't35_16', de: "die Hygiene", uz: "gigiyena" }
+        ]
+      },
+      {
+        id: 'topic-36',
+        number: 36,
+        deTitle: "Kleidung und Mode",
+        uzTitle: "Kiyim va moda",
+        icon: '👗',
+        words: [
+          { id: 't36_1', de: "die Mode", uz: "moda" },
+          { id: 't36_2', de: "die Größe", uz: "o'lcham" },
+          { id: 't36_3', de: "die Umkleidekabine", uz: "kiyim almashtirish xonasi" },
+          { id: 't36_4', de: "anprobieren", uz: "kiyib ko'rmoq" },
+          { id: 't36_5', de: "umtauschen", uz: "almashtirmoq" },
+          { id: 't36_6', de: "zurückgeben", uz: "qaytarib bermoq" },
+          { id: 't36_7', de: "der Kassenbon", uz: "kassa cheki" },
+          { id: 't36_8', de: "gestreift", uz: "yo'l-yo'l" },
+          { id: 't36_9', de: "kariert", uz: "katak-katak" },
+          { id: 't36_10', de: "bequem", uz: "qulay" },
+          { id: 't36_11', de: "eng", uz: "tor" },
+          { id: 't36_12', de: "weit", uz: "keng" },
+          { id: 't36_13', de: "schick", uz: "didli" },
+          { id: 't36_14', de: "modern", uz: "zamonaviy" },
+          { id: 't36_15', de: "die Unterwäsche", uz: "ichki kiyim" },
+          { id: 't36_16', de: "der Gürtel", uz: "kamar" },
+          { id: 't36_17', de: "die Handschuhe", uz: "qo'lqop" }
+        ]
+      },
+      {
+        id: 'topic-37',
+        number: 37,
+        deTitle: "Einkaufen und Reklamation",
+        uzTitle: "Xarid va shikoyat",
+        icon: '🛍️',
+        words: [
+          { id: 't37_1', de: "die Reklamation", uz: "shikoyat" },
+          { id: 't37_2', de: "die Rückgabe", uz: "qaytarish" },
+          { id: 't37_3', de: "der Umtausch", uz: "almashtirish" },
+          { id: 't37_4', de: "der Mangel", uz: "nuqson" },
+          { id: 't37_5', de: "defekt", uz: "nosoz" },
+          { id: 't37_6', de: "beschädigt", uz: "shikastlangan" },
+          { id: 't37_7', de: "die Garantie", uz: "kafolat" },
+          { id: 't37_8', de: "der Kundenservice", uz: "mijozlarga xizmat" },
+          { id: 't37_9', de: "sich beschweren", uz: "shikoyat qilmoq" },
+          { id: 't37_10', de: "zurückerstatten", uz: "pulni qaytarmoq" },
+          { id: 't37_11', de: "umtauschen lassen", uz: "almashtirib olmoq" },
+          { id: 't37_12', de: "das Angebot", uz: "taklif (aksiya)" },
+          { id: 't37_13', de: "reduziert", uz: "chegirmadagi" },
+          { id: 't37_14', de: "ausverkauft", uz: "sotilib bo'lingan" },
+          { id: 't37_15', de: "verfügbar", uz: "mavjud" }
+        ]
+      },
+      {
+        id: 'topic-38',
+        number: 38,
+        deTitle: "Arbeit und Arbeitsplatz",
+        uzTitle: "Ish va ish joyi",
+        icon: '💼',
+        words: [
+          { id: 't38_1', de: "der Arbeitsplatz", uz: "ish joyi" },
+          { id: 't38_2', de: "der Arbeitgeber", uz: "ish beruvchi" },
+          { id: 't38_3', de: "der Arbeitnehmer", uz: "xodim" },
+          { id: 't38_4', de: "die Bewerbung", uz: "ishga ariza" },
+          { id: 't38_5', de: "sich bewerben", uz: "ariza topshirmoq" },
+          { id: 't38_6', de: "der Lebenslauf", uz: "tarjimayi hol (CV)" },
+          { id: 't38_7', de: "das Vorstellungsgespräch", uz: "ishga suhbat" },
+          { id: 't38_8', de: "die Erfahrung", uz: "tajriba" },
+          { id: 't38_9', de: "die Ausbildung", uz: "kasbiy ta'lim" },
+          { id: 't38_10', de: "die Weiterbildung", uz: "malaka oshirish" },
+          { id: 't38_11', de: "die Arbeitszeit", uz: "ish vaqti" },
+          { id: 't38_12', de: "die Schicht", uz: "smena" },
+          { id: 't38_13', de: "die Überstunden", uz: "qo'shimcha ish soatlari" },
+          { id: 't38_14', de: "das Gehalt", uz: "oylik maosh" },
+          { id: 't38_15', de: "der Lohn", uz: "ish haqi" },
+          { id: 't38_16', de: "kündigen", uz: "ishdan bo'shamoq" },
+          { id: 't38_17', de: "einstellen", uz: "ishga qabul qilmoq" },
+          { id: 't38_18', de: "entlassen", uz: "ishdan bo'shatmoq" },
+          { id: 't38_19', de: "pünktlich", uz: "o'z vaqtida" }
+        ]
+      },
+      {
+        id: 'topic-39',
+        number: 39,
+        deTitle: "Berufliche Kommunikation",
+        uzTitle: "Ishdagi muloqot",
+        icon: '🗂️',
+        words: [
+          { id: 't39_1', de: "die Besprechung", uz: "yig'ilish" },
+          { id: 't39_2', de: "das Meeting", uz: "uchrashuv" },
+          { id: 't39_3', de: "die Mitteilung", uz: "bildirishnoma" },
+          { id: 't39_4', de: "die Aufgabe", uz: "vazifa" },
+          { id: 't39_5', de: "der Auftrag", uz: "topshiriq" },
+          { id: 't39_6', de: "die Abteilung", uz: "bo'lim" },
+          { id: 't39_7', de: "der Chef", uz: "boshliq" },
+          { id: 't39_8', de: "die Chefin", uz: "ayol rahbar" },
+          { id: 't39_9', de: "der Mitarbeiter", uz: "xodim" },
+          { id: 't39_10', de: "Bescheid geben", uz: "xabar bermoq" },
+          { id: 't39_11', de: "weiterleiten", uz: "yo'naltirib yubormoq" },
+          { id: 't39_12', de: "erledigen", uz: "bajarmoq" },
+          { id: 't39_13', de: "teilnehmen an", uz: "...da qatnashmoq" },
+          { id: 't39_14', de: "vereinbaren", uz: "kelishib olmoq" },
+          { id: 't39_15', de: "verschieben", uz: "keyinga surmoq" },
+          { id: 't39_16', de: "dringend", uz: "shoshilinch" }
+        ]
+      },
+      {
+        id: 'topic-40',
+        number: 40,
+        deTitle: "Ausbildung und Lernen",
+        uzTitle: "Kasbiy ta’lim va o‘qish",
+        icon: '🎓',
+        words: [
+          { id: 't40_1', de: "die Auszubildende", uz: "kasb-hunar o'rganuvchi" },
+          { id: 't40_2', de: "der Ausbildungsplatz", uz: "ta'lim-amaliyot o'rni" },
+          { id: 't40_3', de: "die Berufsschule", uz: "kasb-hunar maktabi" },
+          { id: 't40_4', de: "der Stundenplan", uz: "dars jadvali" },
+          { id: 't40_5', de: "das Zeugnis", uz: "shahodatnoma" },
+          { id: 't40_6', de: "die Note", uz: "baho" },
+          { id: 't40_7', de: "die Prüfung bestehen", uz: "imtihondan o'tmoq" },
+          { id: 't40_8', de: "durchfallen", uz: "imtihondan yiqilmoq" },
+          { id: 't40_9', de: "erklären", uz: "tushuntirmoq" },
+          { id: 't40_10', de: "die Erklärung", uz: "tushuntirish" },
+          { id: 't40_11', de: "verbessern", uz: "yaxshilamoq" },
+          { id: 't40_12', de: "die Fähigkeit", uz: "qobiliyat" },
+          { id: 't40_13', de: "die Kenntnisse", uz: "bilimlar" },
+          { id: 't40_14', de: "die Fertigkeit", uz: "ko'nikma" },
+          { id: 't40_15', de: "praktisch", uz: "amaliy" },
+          { id: 't40_16', de: "theoretisch", uz: "nazariy" },
+          { id: 't40_17', de: "das Praktikum", uz: "amaliyot" }
+        ]
+      },
+      {
+        id: 'topic-41',
+        number: 41,
+        deTitle: "Verkehr und Mobilität",
+        uzTitle: "Transport va harakatlanish",
+        icon: '🚦',
+        words: [
+          { id: 't41_1', de: "der Verkehr", uz: "transport harakati" },
+          { id: 't41_2', de: "der Verkehrsunfall", uz: "yo'l-transport hodisasi" },
+          { id: 't41_3', de: "der Stau", uz: "tirbandlik" },
+          { id: 't41_4', de: "die Verspätung", uz: "kechikish" },
+          { id: 't41_5', de: "die Verbindung", uz: "qatnov aloqasi" },
+          { id: 't41_6', de: "der Fahrplan", uz: "qatnov jadvali" },
+          { id: 't41_7', de: "die Abfahrt", uz: "jo'nash" },
+          { id: 't41_8', de: "die Ankunft", uz: "yetib kelish" },
+          { id: 't41_9', de: "umsteigen", uz: "transport almashtirmoq" },
+          { id: 't41_10', de: "verpassen", uz: "o'tkazib yubormoq" },
+          { id: 't41_11', de: "die Monatskarte", uz: "oylik chipta" },
+          { id: 't41_12', de: "die Einzelfahrkarte", uz: "bir martalik chipta" },
+          { id: 't41_13', de: "die Kreuzung", uz: "chorraha" },
+          { id: 't41_14', de: "der Führerschein", uz: "haydovchilik guvohnomasi" },
+          { id: 't41_15', de: "bremsen", uz: "tormoz bermoq" },
+          { id: 't41_16', de: "parken", uz: "mashinani qo'ymoq" }
+        ]
+      },
+      {
+        id: 'topic-42',
+        number: 42,
+        deTitle: "Reisen und Unterkunft",
+        uzTitle: "Sayohat va turar joy",
+        icon: '🏨',
+        words: [
+          { id: 't42_1', de: "die Unterkunft", uz: "turar joy" },
+          { id: 't42_2', de: "die Übernachtung", uz: "tunab qolish" },
+          { id: 't42_3', de: "die Rezeption", uz: "mehmonxona qabulxonasi" },
+          { id: 't42_4', de: "das Einzelzimmer", uz: "bir kishilik xona" },
+          { id: 't42_5', de: "das Doppelzimmer", uz: "ikki kishilik xona" },
+          { id: 't42_6', de: "die Vollpension", uz: "kuniga 3 mahal ovqat" },
+          { id: 't42_7', de: "die Halbpension", uz: "kuniga 2 mahal ovqat" },
+          { id: 't42_8', de: "die Sehenswürdigkeit", uz: "diqqatga sazovor joy" },
+          { id: 't42_9', de: "die Führung", uz: "ekskursiya" },
+          { id: 't42_10', de: "der Reiseführer", uz: "gid" },
+          { id: 't42_11', de: "die Auskunft", uz: "ma'lumot" },
+          { id: 't42_12', de: "die Grenze", uz: "chegara" },
+          { id: 't42_13', de: "der Aufenthalt", uz: "bo'lib turish" },
+          { id: 't42_14', de: "verlängern", uz: "uzaytirmoq" },
+          { id: 't42_15', de: "stornieren", uz: "bekor qilmoq" },
+          { id: 't42_16', de: "das Gepäck", uz: "yuk" }
+        ]
+      },
+      {
+        id: 'topic-43',
+        number: 43,
+        deTitle: "Stadtleben und Behörden",
+        uzTitle: "Shahar hayoti va idoralar",
+        icon: '🏛️',
+        words: [
+          { id: 't43_1', de: "das Bürgeramt", uz: "fuqarolar idorasi" },
+          { id: 't43_2', de: "das Rathaus", uz: "shahar hokimiyati" },
+          { id: 't43_3', de: "die Behörde", uz: "davlat idorasi" },
+          { id: 't43_4', de: "das Formular", uz: "anketa (blank)" },
+          { id: 't43_5', de: "der Antrag", uz: "ariza" },
+          { id: 't43_6', de: "beantragen", uz: "ariza bermoq" },
+          { id: 't43_7', de: "die Anmeldung", uz: "ro'yxatdan o'tish" },
+          { id: 't43_8', de: "sich anmelden", uz: "ro'yxatdan o'tmoq" },
+          { id: 't43_9', de: "die Abmeldung", uz: "ro'yxatdan chiqish" },
+          { id: 't43_10', de: "der Ausweis", uz: "shaxsni tasdiqlovchi hujjat" },
+          { id: 't43_11', de: "die Aufenthaltserlaubnis", uz: "yashash ruxsatnomasi" },
+          { id: 't43_12', de: "die Unterschrift", uz: "imzo" },
+          { id: 't43_13', de: "unterschreiben", uz: "imzolamoq" },
+          { id: 't43_14', de: "die Gebühr", uz: "to'lov" },
+          { id: 't43_15', de: "die Öffnungszeiten", uz: "ish vaqti" },
+          { id: 't43_16', de: "der Schalter", uz: "xizmat oynasi" },
+          { id: 't43_17', de: "die Warteschlange", uz: "navbat" },
+          { id: 't43_18', de: "zuständig", uz: "mas'ul" },
+          { id: 't43_19', de: "gültig", uz: "amal qiladigan" }
+        ]
+      },
+      {
+        id: 'topic-44',
+        number: 44,
+        deTitle: "Post, Telefon und Internet",
+        uzTitle: "Pochta, telefon va internet",
+        icon: '📮',
+        words: [
+          { id: 't44_1', de: "die Postleitzahl", uz: "pochta indeksi" },
+          { id: 't44_2', de: "der Briefkasten", uz: "pochta qutisi" },
+          { id: 't44_3', de: "das Paket", uz: "posilka" },
+          { id: 't44_4', de: "der Absender", uz: "jo'natuvchi" },
+          { id: 't44_5', de: "der Empfänger", uz: "qabul qiluvchi" },
+          { id: 't44_6', de: "verschicken", uz: "jo'natmoq" },
+          { id: 't44_7', de: "das Passwort", uz: "parol" },
+          { id: 't44_8', de: "die Webseite", uz: "veb-sahifa" },
+          { id: 't44_9', de: "herunterladen", uz: "yuklab olmoq" }
+        ]
+      },
+      {
+        id: 'topic-45',
+        number: 45,
+        deTitle: "Medien und Nachrichten",
+        uzTitle: "OAV va yangiliklar",
+        icon: '📰',
+        words: [
+          { id: 't45_1', de: "die Medien", uz: "OAV" },
+          { id: 't45_2', de: "die Zeitung", uz: "gazeta" },
+          { id: 't45_3', de: "die Zeitschrift", uz: "jurnal" },
+          { id: 't45_4', de: "der Bericht", uz: "hisobot" },
+          { id: 't45_5', de: "die Nachrichtensendung", uz: "yangiliklar dasturi" },
+          { id: 't45_6', de: "die Werbung", uz: "reklama" },
+          { id: 't45_7', de: "die Anzeige", uz: "e'lon" },
+          { id: 't45_8', de: "der Artikel", uz: "maqola" },
+          { id: 't45_9', de: "der Journalist", uz: "jurnalist" },
+          { id: 't45_10', de: "berichten", uz: "xabar bermoq" },
+          { id: 't45_11', de: "veröffentlichen", uz: "e'lon qilmoq" },
+          { id: 't45_12', de: "die Überschrift", uz: "sarlavha" },
+          { id: 't45_13', de: "aktuell", uz: "dolzarb" },
+          { id: 't45_14', de: "öffentlich", uz: "ommaviy" },
+          { id: 't45_15', de: "privat", uz: "shaxsiy" },
+          { id: 't45_16', de: "die sozialen Medien", uz: "ijtimoiy tarmoqlar" }
+        ]
+      },
+      {
+        id: 'topic-46',
+        number: 46,
+        deTitle: "Umwelt und Natur",
+        uzTitle: "Atrof-muhit va tabiat",
+        icon: '🌍',
+        words: [
+          { id: 't46_1', de: "die Umwelt", uz: "atrof-muhit" },
+          { id: 't46_2', de: "der Umweltschutz", uz: "atrof-muhitni muhofaza qilish" },
+          { id: 't46_3', de: "der Klimawandel", uz: "iqlim o'zgarishi" },
+          { id: 't46_4', de: "die Solarenergie", uz: "quyosh energiyasi" },
+          { id: 't46_5', de: "der Strom", uz: "elektr toki" },
+          { id: 't46_6', de: "Energie sparen", uz: "energiyani tejamoq" },
+          { id: 't46_7', de: "recyceln", uz: "qayta ishlamoq" },
+          { id: 't46_8', de: "die Verpackung", uz: "qadoq" },
+          { id: 't46_9', de: "der Abfall", uz: "chiqindi" },
+          { id: 't46_10', de: "die Luft", uz: "havo" },
+          { id: 't46_11', de: "die Landschaft", uz: "manzara" },
+          { id: 't46_12', de: "die Pflanze", uz: "o'simlik" },
+          { id: 't46_13', de: "nachhaltig", uz: "barqaror (ekologik)" }
+        ]
+      },
+      {
+        id: 'topic-47',
+        number: 47,
+        deTitle: "Wetter und Klima",
+        uzTitle: "Ob-havo va iqlim",
+        icon: '🌦️',
+        words: [
+          { id: 't47_1', de: "das Klima", uz: "iqlim" },
+          { id: 't47_2', de: "die Temperatur", uz: "harorat" },
+          { id: 't47_3', de: "der Grad", uz: "daraja" },
+          { id: 't47_4', de: "der Sturm", uz: "bo'ron" },
+          { id: 't47_5', de: "das Gewitter", uz: "momaqaldiroqli yomg'ir" },
+          { id: 't47_6', de: "der Blitz", uz: "chaqmoq" },
+          { id: 't47_7', de: "der Donner", uz: "momaqaldiroq" },
+          { id: 't47_8', de: "der Nebel", uz: "tuman" },
+          { id: 't47_9', de: "die Hitze", uz: "jazirama" },
+          { id: 't47_10', de: "die Kälte", uz: "sovuq" },
+          { id: 't47_11', de: "frieren", uz: "sovqotmoq" },
+          { id: 't47_12', de: "schwitzen", uz: "terlamoq" },
+          { id: 't47_13', de: "scheinen", uz: "nur sochmoq" },
+          { id: 't47_14', de: "steigen", uz: "ko'tarilmoq" },
+          { id: 't47_15', de: "sinken", uz: "pasaymoq" },
+          { id: 't47_16', de: "trocken", uz: "quruq" },
+          { id: 't47_17', de: "feucht", uz: "nam" },
+          { id: 't47_18', de: "wechselhaft", uz: "o'zgaruvchan" }
+        ]
+      },
+      {
+        id: 'topic-48',
+        number: 48,
+        deTitle: "Freizeit, Kultur und Veranstaltungen",
+        uzTitle: "Dam olish va madaniyat",
+        icon: '🎭',
+        words: [
+          { id: 't48_1', de: "die Veranstaltung", uz: "tadbir" },
+          { id: 't48_2', de: "das Konzert", uz: "konsert" },
+          { id: 't48_3', de: "die Ausstellung", uz: "ko'rgazma" },
+          { id: 't48_4', de: "die Eintrittskarte", uz: "kirish chiptasi" },
+          { id: 't48_5', de: "die Bühne", uz: "sahna" },
+          { id: 't48_6', de: "das Publikum", uz: "tomoshabinlar" },
+          { id: 't48_7', de: "die Vorstellung", uz: "tomosha (seans)" },
+          { id: 't48_8', de: "das Theaterstück", uz: "sahna asari" },
+          { id: 't48_9', de: "die Feier", uz: "bayram (ziyofat)" },
+          { id: 't48_10', de: "organisieren", uz: "tashkil qilmoq" },
+          { id: 't48_11', de: "kostenlos", uz: "bepul" },
+          { id: 't48_12', de: "ausverkauft", uz: "chiptalar tugagan" },
+          { id: 't48_13', de: "spannend", uz: "hayajonli" }
+        ]
+      },
+      {
+        id: 'topic-49',
+        number: 49,
+        deTitle: "Sport und Bewegung",
+        uzTitle: "Sport va jismoniy faollik",
+        icon: '🏃',
+        words: [
+          { id: 't49_1', de: "die Bewegung", uz: "harakat" },
+          { id: 't49_2', de: "das Training", uz: "mashg'ulot" },
+          { id: 't49_3', de: "die Ausdauer", uz: "chidamlilik" },
+          { id: 't49_4', de: "der Wettbewerb", uz: "musobaqa" },
+          { id: 't49_5', de: "das Turnier", uz: "turnir" },
+          { id: 't49_6', de: "der Sieg", uz: "g'alaba" },
+          { id: 't49_7', de: "die Niederlage", uz: "mag'lubiyat" },
+          { id: 't49_8', de: "unentschieden", uz: "durang" },
+          { id: 't49_9', de: "sich verletzen", uz: "jarohatlanmoq" },
+          { id: 't49_10', de: "sich aufwärmen", uz: "badanni qizdirmoq" },
+          { id: 't49_11', de: "fit bleiben", uz: "formada qolmoq" },
+          { id: 't49_12', de: "der Verein", uz: "klub" },
+          { id: 't49_13', de: "die Leistung", uz: "natija (ko'rsatkich)" }
+        ]
+      },
+      {
+        id: 'topic-50',
+        number: 50,
+        deTitle: "Feste und Traditionen",
+        uzTitle: "Bayramlar va an’analar",
+        icon: '🎉',
+        words: [
+          { id: 't50_1', de: "das Fest", uz: "bayram" },
+          { id: 't50_2', de: "die Tradition", uz: "an'ana" },
+          { id: 't50_3', de: "der Feiertag", uz: "bayram kuni" },
+          { id: 't50_4', de: "das Neujahr", uz: "Yangi yil" },
+          { id: 't50_5', de: "Weihnachten", uz: "Rojdestvo" },
+          { id: 't50_6', de: "Ostern", uz: "Pasxa" },
+          { id: 't50_7', de: "der Geburtstag", uz: "tug'ilgan kun" },
+          { id: 't50_8', de: "die Hochzeit", uz: "to'y" },
+          { id: 't50_9', de: "das Geschenk", uz: "sovg'a" },
+          { id: 't50_10', de: "schenken", uz: "sovg'a qilmoq" },
+          { id: 't50_11', de: "feiern", uz: "nishonlamoq" },
+          { id: 't50_12', de: "schmücken", uz: "bezatmoq" },
+          { id: 't50_13', de: "die Dekoration", uz: "bezak" },
+          { id: 't50_14', de: "das Feuerwerk", uz: "mushakbozlik" }
+        ]
+      },
+      {
+        id: 'topic-51',
+        number: 51,
+        deTitle: "Geld und Bank",
+        uzTitle: "Pul va bank",
+        icon: '🏦',
+        words: [
+          { id: 't51_1', de: "das Konto", uz: "hisob raqami" },
+          { id: 't51_2', de: "die Bankkarte", uz: "bank kartasi" },
+          { id: 't51_3', de: "die Kreditkarte", uz: "kredit karta" },
+          { id: 't51_4', de: "die Überweisung", uz: "pul o'tkazmasi" },
+          { id: 't51_5', de: "überweisen", uz: "pul o'tkazmoq" },
+          { id: 't51_6', de: "abheben", uz: "naqd pul yechmoq" },
+          { id: 't51_7', de: "einzahlen", uz: "hisobga pul qo'ymoq" },
+          { id: 't51_8', de: "das Bargeld", uz: "naqd pul" },
+          { id: 't51_9', de: "der Geldautomat", uz: "bankomat" },
+          { id: 't51_10', de: "sparen", uz: "pul jamg'armoq" },
+          { id: 't51_11', de: "die Ersparnisse", uz: "jamg'arma" },
+          { id: 't51_12', de: "ausgeben", uz: "pul sarflamoq" },
+          { id: 't51_13', de: "leihen", uz: "qarzga olmoq (bermoq)" },
+          { id: 't51_14', de: "das Darlehen", uz: "qarz (kredit)" },
+          { id: 't51_15', de: "die Schulden", uz: "qarzlar" }
+        ]
+      },
+      {
+        id: 'topic-52',
+        number: 52,
+        deTitle: "Wohnen in der Stadt und auf dem Land",
+        uzTitle: "Shahar va qishloqda yashash",
+        icon: '🏡',
+        words: [
+          { id: 't52_1', de: "die Großstadt", uz: "katta shahar" },
+          { id: 't52_2', de: "die Kleinstadt", uz: "kichik shahar" },
+          { id: 't52_3', de: "das Dorfleben", uz: "qishloq hayoti" },
+          { id: 't52_4', de: "die Innenstadt", uz: "shahar markazi" },
+          { id: 't52_5', de: "der Stadtrand", uz: "shahar chekkasi" },
+          { id: 't52_6', de: "die Vorstadt", uz: "shahar atrofi" },
+          { id: 't52_7', de: "die Bevölkerung", uz: "aholi" },
+          { id: 't52_8', de: "die Einwohner", uz: "aholi vakillari" },
+          { id: 't52_9', de: "die Nachbarschaft", uz: "qo'shnichilik" },
+          { id: 't52_10', de: "die Ruhe", uz: "osoyishtalik" },
+          { id: 't52_11', de: "der Lärm", uz: "shovqin" },
+          { id: 't52_12', de: "die Infrastruktur", uz: "infratuzilma" },
+          { id: 't52_13', de: "ländlich", uz: "qishloqqa xos" },
+          { id: 't52_14', de: "städtisch", uz: "shaharga xos" },
+          { id: 't52_15', de: "zentral", uz: "markaziy" },
+          { id: 't52_16', de: "in der Nähe", uz: "yaqin atrofda" }
+        ]
+      },
+      {
+        id: 'topic-53',
+        number: 53,
+        deTitle: "Häufige Verben mit Präpositionen",
+        uzTitle: "Predlogli fe’llar",
+        icon: '🧩',
+        words: [
+          { id: 't53_1', de: "warten auf + Akk.", uz: "...ni kutmoq" },
+          { id: 't53_2', de: "denken an + Akk.", uz: "...haqida o'ylamoq" },
+          { id: 't53_3', de: "sich freuen auf + Akk. oder über + Akk.", uz: "...ni intiqlik bilan kutmoq yoki ...dan xursand bo'lmoq" },
+          { id: 't53_4', de: "sprechen mit + Dat. oder über + Akk.", uz: "...bilan gaplashmoq yoki ...haqida gapirmoq" },
+          { id: 't53_5', de: "teilnehmen an + Dat.", uz: "...da qatnashmoq" },
+          { id: 't53_6', de: "sich interessieren für + Akk.", uz: "...ga qiziqmoq" },
+          { id: 't53_7', de: "bitten um + Akk.", uz: "...ni so'ramoq" },
+          { id: 't53_8', de: "danken für + Akk.", uz: "...uchun rahmat aytmoq" },
+          { id: 't53_9', de: "helfen bei + Dat.", uz: "...da yordam bermoq" },
+          { id: 't53_10', de: "träumen von + Dat.", uz: "...ni orzu qilmoq" },
+          { id: 't53_11', de: "sich kümmern um + Akk.", uz: "...ga g'amxo'rlik qilmoq" },
+          { id: 't53_12', de: "fragen nach + Dat.", uz: "...haqida so'ramoq" },
+          { id: 't53_13', de: "erzählen von + Dat.", uz: "...haqida hikoya qilmoq" },
+          { id: 't53_14', de: "Angst haben vor + Dat.", uz: "...dan qo'rqmoq" },
+          { id: 't53_15', de: "gehören zu + Dat.", uz: "...ga tegishli bo'lmoq" }
+        ]
+      },
+      {
+        id: 'topic-54',
+        number: 54,
+        deTitle: "Trennbare und wichtige Verben",
+        uzTitle: "Ajraladigan va muhim fe’llar",
+        icon: '🔀',
+        words: [
+          { id: 't54_1', de: "abholen", uz: "borib olib kelmoq" },
+          { id: 't54_2', de: "anrufen", uz: "qo'ng'iroq qilmoq" },
+          { id: 't54_3', de: "aufgeben", uz: "topshirmoq (taslim bo'lmoq)" },
+          { id: 't54_4', de: "aufpassen", uz: "e'tibor bermoq" },
+          { id: 't54_5', de: "aufhören", uz: "to'xtatmoq" },
+          { id: 't54_6', de: "ausfüllen", uz: "to'ldirmoq" },
+          { id: 't54_7', de: "ausmachen", uz: "o'chirmoq (kelishib olmoq)" },
+          { id: 't54_8', de: "einladen", uz: "taklif qilmoq" },
+          { id: 't54_9', de: "einkaufen", uz: "xarid qilmoq" },
+          { id: 't54_10', de: "einsteigen", uz: "transportga chiqmoq" },
+          { id: 't54_11', de: "fernsehen", uz: "televizor ko'rmoq" },
+          { id: 't54_12', de: "mitbringen", uz: "o'zi bilan olib kelmoq" },
+          { id: 't54_13', de: "vorbereiten", uz: "tayyorlamoq" },
+          { id: 't54_14', de: "vorstellen", uz: "tanishtirmoq" },
+          { id: 't54_15', de: "zurückkommen", uz: "qaytib kelmoq" },
+          { id: 't54_16', de: "zuhören", uz: "diqqat bilan tinglamoq" },
+          { id: 't54_17', de: "wegwerfen", uz: "tashlab yubormoq" },
+          { id: 't54_18', de: "zumachen", uz: "yopmoq" }
+        ]
+      },
+      {
+        id: 'topic-55',
+        number: 55,
+        deTitle: "Adjektive und Adverbien",
+        uzTitle: "Sifatlar va ravishlar",
+        icon: '✨',
+        words: [
+          { id: 't55_1', de: "ähnlich", uz: "o'xshash" },
+          { id: 't55_2', de: "anders", uz: "boshqacha" },
+          { id: 't55_3', de: "besonders", uz: "alohida" },
+          { id: 't55_4', de: "bestimmt", uz: "aniq" },
+          { id: 't55_5', de: "bequem", uz: "qulay" },
+          { id: 't55_6', de: "deutlich", uz: "aniq-ravshan" },
+          { id: 't55_7', de: "direkt", uz: "to'g'ridan-to'g'ri" },
+          { id: 't55_8', de: "dringend", uz: "shoshilinch" },
+          { id: 't55_9', de: "erfolgreich", uz: "muvaffaqiyatli" },
+          { id: 't55_10', de: "gefährlich", uz: "xavfli" },
+          { id: 't55_11', de: "gewöhnlich", uz: "odatdagi" },
+          { id: 't55_12', de: "möglich", uz: "mumkin" },
+          { id: 't55_13', de: "notwendig", uz: "zarur" },
+          { id: 't55_14', de: "plötzlich", uz: "to'satdan" },
+          { id: 't55_15', de: "praktisch", uz: "amaliy" },
+          { id: 't55_16', de: "wahrscheinlich", uz: "ehtimol" },
+          { id: 't55_17', de: "wirklich", uz: "haqiqatan" },
+          { id: 't55_18', de: "zufällig", uz: "tasodifan" },
+          { id: 't55_19', de: "zusätzlich", uz: "qo'shimcha" },
+          { id: 't55_20', de: "trotzdem", uz: "shunga qaramay" },
+          { id: 't55_21', de: "deswegen", uz: "shu sababli" },
+          { id: 't55_22', de: "außerdem", uz: "bundan tashqari" }
+        ]
+      },
+      {
+        id: 'topic-56',
+        number: 56,
+        deTitle: "Konnektoren und Redemittel",
+        uzTitle: "Bog‘lovchilar va tayyor iboralar",
+        icon: '🗣️',
+        words: [
+          { id: 't56_1', de: "obwohl", uz: "garchi" },
+          { id: 't56_2', de: "trotzdem", uz: "shunga qaramay" },
+          { id: 't56_3', de: "deshalb", uz: "shu sababli" },
+          { id: 't56_4', de: "deswegen", uz: "shu bois" },
+          { id: 't56_5', de: "außerdem", uz: "bundan tashqari" },
+          { id: 't56_6', de: "zuerst", uz: "avval" },
+          { id: 't56_7', de: "danach", uz: "undan keyin" },
+          { id: 't56_8', de: "anschließend", uz: "shundan so'ng" },
+          { id: 't56_9', de: "zum Schluss", uz: "oxirida" },
+          { id: 't56_10', de: "während", uz: "...paytida" },
+          { id: 't56_11', de: "bevor", uz: "...dan oldin" },
+          { id: 't56_12', de: "nachdem", uz: "...dan keyin" },
+          { id: 't56_13', de: "falls", uz: "agar" },
+          { id: 't56_14', de: "damit", uz: "...uchun (toki)" },
+          { id: 't56_15', de: "entweder ... oder", uz: "yo ... yo" },
+          { id: 't56_16', de: "nicht nur ... sondern auch", uz: "nafaqat ... balki" },
+          { id: 't56_17', de: "sowohl ... als auch", uz: "ham ... ham" },
+          { id: 't56_18', de: "zum Beispiel", uz: "masalan" },
+          { id: 't56_19', de: "meiner Ansicht nach", uz: "mening nazarimda" },
+          { id: 't56_20', de: "ich bin damit einverstanden", uz: "men bunga roziman" },
+          { id: 't56_21', de: "das sehe ich anders", uz: "men buni boshqacha ko'raman" },
+          { id: 't56_22', de: "ich hätte gern", uz: "men ... xohlardim" },
+          { id: 't56_23', de: "Könnten Sie bitte ...?", uz: "Iltimos, ... qila olasizmi?" },
+          { id: 't56_24', de: "Es tut mir leid", uz: "afsusdaman / uzr" },
+          { id: 't56_25', de: "Vielen Dank im Voraus", uz: "oldindan katta rahmat" }
+        ]
+      }
+    ];
+
+    // LocalStorage Key
+    const STORAGE_KEY = 'berlin_academy_samandar_srs_v1';
+
+    // Application State
+    let srsState = loadSRSState();
+    let selectedTopicIds = new Set();
+    let activeStudyQueue = [];
+    let currentCardIndex = 0;
+    let isCardFlipped = false;
+    let studyDirection = 'DE_UZ'; // 'DE_UZ' or 'UZ_DE'
+    let currentSessionTitle = '';
+    let currentSessionTopicIds = [];
+    let currentTableTopicId = null;
+    let confirmResetPending = false;
+
+    // Load & Save SRS Progress
+    function loadSRSState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        return raw ? JSON.parse(raw) : {};
+      } catch (e) {
+        return {};
+      }
+    }
+
+    function saveSRSState() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(srsState));
+        updateGlobalStats();
+      } catch (e) {
+        console.warn('Storage error', e);
+      }
+    }
+
+    function getCardProgress(wordId) {
+      return srsState[wordId] || {
+        reps: 0,
+        interval: 0, // in days
+        ease: 2.5,
+        easy: 0, // number of "Oson" ratings (2 = learned)
+        due: 0 // timestamp
+      };
+    }
+
+    // Format German Articles with Color Coding (der = cyan/blue, die = rose/pink, das = emerald)
+    function formatGermanWordHTML(text) {
+      if (text.startsWith('der ')) {
+        return `<span class="text-sky-400 font-bold">der</span> ${text.slice(4)}`;
+      }
+      if (text.startsWith('die ')) {
+        return `<span class="text-rose-400 font-bold">die</span> ${text.slice(4)}`;
+      }
+      if (text.startsWith('das ')) {
+        return `<span class="text-emerald-400 font-bold">das</span> ${text.slice(4)}`;
+      }
+      return text;
+    }
+
+    // Toast Notification Helper
+    let toastTimer = null;
+    function showToast(msg) {
+      const box = document.getElementById('toast-box');
+      const text = document.getElementById('toast-message');
+      text.textContent = msg;
+      box.classList.remove('opacity-0', '-translate-y-3');
+      box.classList.add('opacity-100', 'translate-y-0');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        box.classList.add('opacity-0', '-translate-y-3');
+        box.classList.remove('opacity-100', 'translate-y-0');
+      }, 2600);
+    }
+
+    // Text-to-Speech (German Pronunciation)
+    function speakGerman(text) {
+      if (!('speechSynthesis' in window)) {
+        showToast('Brauzeringizda ovozli talaffuz qo‘llab-quvvatlanmaydi.');
+        return;
+      }
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'de-DE';
+      utterance.rate = 0.92;
+      
+      // Try to pick a native German voice if available
+      const voices = window.speechSynthesis.getVoices();
+      const deVoice = voices.find(v => v.lang.includes('de'));
+      if (deVoice) utterance.voice = deVoice;
+      
+      window.speechSynthesis.speak(utterance);
+    }
+
+    // Navigation Controller
+    function navigateTo(screenName) {
+      const screens = ['hero', 'topics', 'study', 'table'];
+      screens.forEach(s => {
+        const el = document.getElementById(`screen-${s}`);
+        if (el) el.classList.add('hidden');
+      });
+
+      const target = document.getElementById(`screen-${screenName}`);
+      if (target) {
+        target.classList.remove('hidden');
+        target.classList.remove('screen-enter');
+        void target.offsetWidth; // trigger reflow
+        target.classList.add('screen-enter');
+      }
+
+      if (screenName === 'topics') {
+        renderTopics();
+      }
+      updateGlobalStats();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Update Top Header Mastered Stats
+    function updateGlobalStats() {
+      let totalWords = 0;
+      let masteredWords = 0;
+      CURRICULUM_DATA.forEach(topic => {
+        topic.words.forEach(w => {
+          totalWords++;
+          const prog = getCardProgress(w.id);
+          if ((prog.easy || 0) >= 2) masteredWords++;
+        });
+      });
+      document.getElementById('header-mastered-count').textContent = `${masteredWords} / ${totalWords}`;
+      updateOwlGrowth(masteredWords, totalWords);
+    }
+
+    // Owl grows with learned words (a word counts as learned after 2 "Oson" ratings, reset by "Qiyin")
+    const OWL_META_KEY = 'berlin_academy_owl_meta_v1';
+    let owlMeta = (() => { try { return JSON.parse(localStorage.getItem(OWL_META_KEY)) || {}; } catch (e) { return {}; } })();
+    const saveOwlMeta = () => { try { localStorage.setItem(OWL_META_KEY, JSON.stringify(owlMeta)); } catch (e) {} };
+    const dayKey = (d = new Date()) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    const daysBetween = (a, b) => { const f = k => { const [y, m, d] = k.split('-').map(Number); return Date.UTC(y, m - 1, d); }; return Math.round((f(b) - f(a)) / 864e5); };
+    const owlShow = (id, on) => { const e = document.getElementById(id); if (e) e.style.display = on ? '' : 'none'; };
+    const OWL_STAGES = [
+      { min: 0, de: 'Küken', uz: 'jo‘ja', ic: '🐣' },
+      { min: 25, de: 'Junge Eule', uz: 'yosh boyo‘g‘li', ic: '🦉' },
+      { min: 50, de: 'Eule', uz: 'boyo‘g‘li', ic: '🦉' },
+      { min: 75, de: 'Weise Eule', uz: 'dono boyo‘g‘li', ic: '🎓' }
+    ];
+    const OWL_CHEERS = {
+      10: ['Gut gemacht!', 'Barakalla!'],
+      20: ['Weiter so!', 'Shunday davom et!'],
+      30: ['Prima! Ich werde größer!', 'Zo‘r! Men kattalashyapman!'],
+      40: ['Super, du lernst schnell!', 'Ajoyib, tez o‘rganyapsan!'],
+      50: ['Toll! Die Hälfte ist geschafft!', 'Ajoyib! Yarmi bajarildi!'],
+      60: ['Wunderbar! Mach weiter so!', 'Ajoyib! Shunday davom et!'],
+      70: ['Fantastisch! Du bist stark!', 'Zo‘r! Sen kuchlisan!'],
+      80: ['Fast geschafft! Bravo!', 'Deyarli tayyor! Barakalla!'],
+      90: ['Unglaublich! Fast am Ziel!', 'Ishonib bo‘lmaydi! Maqsad yaqin!'],
+      100: ['Herzlichen Glückwunsch! Du bist ein Meister!', 'Tabriklayman! Sen ustasan!']
+    };
+    let owlStage = OWL_STAGES[0], owlInit = false, owlReturning = false;
+
+    function setOwlSleepy(on) {
+      const sv = document.getElementById('owl-svg');
+      if (sv) sv.classList.toggle('owl-sleepy', on);
+      owlShow('owl-lids', on); owlShow('owl-zzz', on);
+    }
+    function owlStreakValue() {
+      const n = owlMeta.streak || 0;
+      return (owlMeta.lastDay && daysBetween(owlMeta.lastDay, dayKey()) > 1) ? 0 : n;
+    }
+    function updateOwlStreak() {
+      const el = document.getElementById('owl-streak');
+      if (el) el.textContent = `🔥 ${owlStreakValue()} kun`;
+    }
+    function registerPractice() {
+      const today = dayKey();
+      if (owlMeta.lastDay === today) return;
+      owlMeta.streak = (owlMeta.lastDay && daysBetween(owlMeta.lastDay, today) === 1) ? (owlMeta.streak || 0) + 1 : 1;
+      owlMeta.lastDay = today;
+      saveOwlMeta();
+      updateOwlStreak();
+    }
+
+    // Golden transformation: wings 50%, ear tufts 60%, tail 70%, feet 80%, head 90%, everything + amber eyes 100%
+    function applyOwlGold(pct) {
+      const G = 'url(#goldGrad)';
+      const f = (id, attr, val) => { const e = document.getElementById(id); if (e) e.setAttribute(attr, val); };
+      ['owl-wing-l', 'owl-wing-r'].forEach(id => { f(id, 'fill', pct >= 50 ? G : '#0369a1'); f(id, 'stroke', pct >= 50 ? '#fde68a' : '#38bdf8'); });
+      ['owl-tuft-l', 'owl-tuft-r'].forEach(id => f(id, 'fill', pct >= 60 ? G : '#0284c7'));
+      f('owl-tail', 'fill', pct >= 70 ? G : '#1e3a8a');
+      f('owl-claws', 'stroke', pct >= 80 ? '#fbbf24' : '#bae6fd');
+      f('owl-head', 'fill', pct >= 90 ? G : 'url(#owlBodyGrad)');
+      f('owl-body', 'fill', pct >= 100 ? G : 'url(#owlBodyGrad)');
+      f('owl-belly', 'fill', pct >= 100 ? 'url(#goldBellyGrad)' : 'url(#owlBellyGrad)');
+      ['owl-iris-l', 'owl-iris-r'].forEach(id => f(id, 'fill', pct >= 100 ? 'url(#eyeGoldGrad)' : 'url(#eyeIrisGrad)'));
+      f('owl-beak-path', 'fill', pct >= 100 ? '#f59e0b' : '#38bdf8');
+      const sv = document.getElementById('owl-svg');
+      if (sv) sv.style.filter = pct >= 90 ? 'drop-shadow(0 20px 35px rgba(251,191,36,0.55))' : '';
+    }
+
+    function updateOwlGrowth(learned, total) {
+      const pct = total ? Math.round((learned / total) * 100) : 0;
+      const grow = document.getElementById('owl-grow');
+      if (grow) grow.style.transform = `scale(${(0.62 + 0.56 * (pct / 100)).toFixed(3)})`;
+      const set = (id, fn) => { const el = document.getElementById(id); if (el) fn(el); };
+      set('owl-percent', el => el.textContent = pct + '%');
+      set('owl-percent-bar', el => el.style.width = pct + '%');
+      set('owl-count', el => el.textContent = `${learned} / ${total} so‘z yodlandi`);
+      owlStage = [...OWL_STAGES].reverse().find(st => pct >= st.min);
+      set('owl-stage', el => el.textContent = `${owlStage.ic} ${owlStage.de} · ${owlStage.uz}`);
+      [['owl-bow', 10], ['owl-scarf', 20], ['owl-glasses', 30], ['owl-book', 40], ['owl-cap', 50], ['owl-medal', 60],
+       ['owl-stars', 70], ['owl-cape', 80], ['owl-aura', 90], ['owl-diploma', 100], ['owl-cap-text', 100]].forEach(([id, min]) => owlShow(id, pct >= min));
+      applyOwlGold(pct);
+      const reached = Math.floor(pct / 10) * 10;
+      if (!owlInit) {
+        owlInit = true;
+        if (owlMeta.milestone === undefined) { owlMeta.milestone = reached; saveOwlMeta(); }
+        if (owlMeta.lastDay && daysBetween(owlMeta.lastDay, dayKey()) >= 3) { owlReturning = true; setOwlSleepy(true); }
+      } else if (reached > (owlMeta.milestone || 0)) {
+        owlMeta.milestone = reached; saveOwlMeta();
+        owlSay(OWL_CHEERS[reached][0], OWL_CHEERS[reached][1]);
+      } else if (reached < (owlMeta.milestone || 0)) {
+        owlMeta.milestone = reached; saveOwlMeta();
+      }
+      updateOwlStreak();
+    }
+
+    async function shareOwlCard() {
+      const total = CURRICULUM_DATA.reduce((a, t) => a + t.words.length, 0);
+      const learned = CURRICULUM_DATA.reduce((a, t) => a + t.words.filter(w => (getCardProgress(w.id).easy || 0) >= 2).length, 0);
+      const pct = total ? Math.round((learned / total) * 100) : 0;
+      const streak = owlStreakValue();
+      const c = document.createElement('canvas'); c.width = 1080; c.height = 1350;
+      const x = c.getContext('2d');
+      const g = x.createLinearGradient(0, 0, 0, 1350); g.addColorStop(0, '#0a3a9a'); g.addColorStop(1, '#1e6fe0');
+      x.fillStyle = g; x.fillRect(0, 0, 1080, 1350);
+      x.textAlign = 'center';
+      x.fillStyle = '#ffffff'; x.font = '800 64px sans-serif'; x.fillText('BERLIN ACADEMY', 540, 120);
+      x.fillStyle = '#bae6fd'; x.font = '600 34px sans-serif'; x.fillText('Nemis Tili Kurslar', 540, 175);
+      try {
+        const svg = document.getElementById('owl-svg').cloneNode(true);
+        svg.removeAttribute('class'); svg.setAttribute('width', 360); svg.setAttribute('height', 360);
+        const url = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(new XMLSerializer().serializeToString(svg));
+        const img = new Image();
+        await new Promise((ok, no) => { img.onload = ok; img.onerror = no; img.src = url; });
+        x.drawImage(img, 190, 230, 700, 700);
+      } catch (e) { x.font = '400 380px sans-serif'; x.fillText('🦉', 540, 700); }
+      x.fillStyle = '#ffffff'; x.font = '800 84px sans-serif'; x.fillText(`Men ${pct}% o‘rgandim!`, 540, 1020);
+      x.fillStyle = '#7dd3fc'; x.font = '700 50px sans-serif'; x.fillText(`${owlStage.de} · ${owlStage.uz}`, 540, 1100);
+      x.fillStyle = '#e0f2fe'; x.font = '600 40px sans-serif'; x.fillText(`${learned} / ${total} so‘z yodlandi`, 540, 1165);
+      if (streak > 0) x.fillText(`🔥 ${streak} kun ketma-ket`, 540, 1225);
+      x.fillStyle = '#bae6fd'; x.font = '500 32px sans-serif'; x.fillText('prepared by Pardayev Samandar', 540, 1305);
+      const blob = await new Promise(r => c.toBlob(r, 'image/png'));
+      const file = new File([blob], 'boyoqli-natija.png', { type: 'image/png' });
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        try { await navigator.share({ files: [file], title: 'BERLIN ACADEMY' }); return; }
+        catch (e) { if (e.name === 'AbortError') return; }
+      }
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = file.name; a.click();
+      showToast('Natija rasmi yuklab olindi 📥');
+    }
+
+    // Render Topics List (Screen 2)
+    function renderTopics() {
+      const grid = document.getElementById('topics-grid');
+      const query = (document.getElementById('topic-search-input').value || '').trim().toLowerCase();
+      const now = Date.now();
+
+      // Handle global word search
+      const searchBox = document.getElementById('global-word-search-results');
+      const searchList = document.getElementById('global-word-search-list');
+      if (query.length >= 2) {
+        const matchedWords = [];
+        CURRICULUM_DATA.forEach(t => {
+          t.words.forEach(w => {
+            if (w.de.toLowerCase().includes(query) || w.uz.toLowerCase().includes(query)) {
+              matchedWords.push({ ...w, topicNum: t.number });
+            }
+          });
+        });
+
+        if (matchedWords.length > 0) {
+          searchBox.classList.remove('hidden');
+          searchList.innerHTML = matchedWords.map(w => `
+            <div class="glass-card p-3 rounded-xl flex items-center justify-between gap-2">
+              <div>
+                <div class="font-semibold text-white text-sm">${formatGermanWordHTML(w.de)}</div>
+                <div class="text-xs text-slate-300">${w.uz} <span class="text-cyan-400/70">• #${w.topicNum}</span></div>
+              </div>
+              <button onclick="speakGerman('${w.de.replace(/'/g, "\\'")}')" class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-300 flex items-center justify-center shrink-0 hover:bg-cyan-500/30">
+                🔊
+              </button>
+            </div>
+          `).join('');
+        } else {
+          searchBox.classList.add('hidden');
+        }
+      } else {
+        searchBox.classList.add('hidden');
+      }
+
+      // Render each topic card
+      grid.innerHTML = CURRICULUM_DATA.map(topic => {
+        const total = topic.words.length;
+        let learned = 0;
+        let dueCount = 0;
+
+        topic.words.forEach(w => {
+          const p = getCardProgress(w.id);
+          if ((p.easy || 0) >= 2) learned++;
+          if (p.due <= now) dueCount++;
+        });
+
+        const percent = Math.round((learned / total) * 100);
+        const isChecked = selectedTopicIds.has(topic.id);
+
+        return `
+          <div class="glass-card rounded-3xl p-5 sm:p-6 flex flex-col justify-between relative ${isChecked ? 'ring-2 ring-cyan-400 bg-cyan-950/30' : ''}">
+            <div>
+              <!-- Top Row: Number Badge & Multi-select Checkbox -->
+              <div class="flex items-start justify-between gap-3 mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-500/25 to-blue-600/25 border border-cyan-400/35 flex items-center justify-center text-2xl shadow-inner">
+                    ${topic.icon}
+                  </div>
+                  <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-cyan-300">
+                      ${topic.number}-Mavzu • ${total} ta so‘z
+                    </span>
+                    <h3 class="font-display text-lg sm:text-xl font-bold text-white leading-snug">
+                      ${topic.deTitle}${learned === total ? ' ⭐' : ''}
+                    </h3>
+                    <p class="text-sm text-slate-300">${topic.uzTitle}</p>
+                  </div>
+                </div>
+
+                <!-- Multi-Select Toggle -->
+                <label class="flex items-center gap-1.5 cursor-pointer select-none bg-white/5 hover:bg-white/10 px-2.5 py-1.5 rounded-xl border border-white/10" title="Bir nechta mavzuni birga yodlash uchun belgilang">
+                  <input 
+                    type="checkbox" 
+                    ${isChecked ? 'checked' : ''} 
+                    onchange="toggleTopicSelection('${topic.id}')"
+                    class="w-4 h-4 accent-cyan-400 rounded cursor-pointer"
+                  />
+                  <span class="text-[11px] text-slate-300 font-medium">Tanlash</span>
+                </label>
+              </div>
+
+              <!-- Stats Pills -->
+              <div class="flex flex-wrap items-center gap-2 mb-4 text-xs">
+                <span class="px-2.5 py-1 rounded-lg bg-blue-500/15 text-blue-200 border border-blue-400/25">
+                  Takrorlashga: <b>${dueCount}</b>
+                </span>
+                <span class="px-2.5 py-1 rounded-lg bg-emerald-500/15 text-emerald-200 border border-emerald-400/25">
+                  O‘zlashtirildi: <b>${learned}/${total}</b>
+                </span>
+              </div>
+
+              <!-- Progress Bar -->
+              <div class="mb-5">
+                <div class="flex justify-between text-xs mb-1.5">
+                  <span class="text-slate-400">O‘zlashtirish darajasi</span>
+                  <span class="font-bold text-cyan-300">${percent}%</span>
+                </div>
+                <div class="w-full h-2 bg-blue-950/50 rounded-full overflow-hidden border border-white/10">
+                  <div class="h-full bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full transition-all duration-500" style="width: ${percent}%"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="grid grid-cols-2 gap-3 pt-2">
+              <button onclick="startTopicStudy(['${topic.id}'])" class="btn-cta text-white font-semibold text-xs sm:text-sm py-3 px-4 rounded-xl flex items-center justify-center gap-1.5 cursor-pointer">
+                <span>Yodlashni boshlash</span>
+              </button>
+              <button onclick="openTopicTable('${topic.id}')" class="glass-card hover:bg-white/10 text-slate-200 font-medium text-xs sm:text-sm py-3 px-4 rounded-xl flex items-center justify-center gap-1.5 transition cursor-pointer">
+                <span>Lug‘at ro‘yxati</span>
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      updateMultiSelectButton();
+    }
+
+    // Multi-Topic Selection Handlers
+    function toggleTopicSelection(topicId) {
+      if (selectedTopicIds.has(topicId)) {
+        selectedTopicIds.delete(topicId);
+      } else {
+        selectedTopicIds.add(topicId);
+      }
+      renderTopics();
+    }
+
+    function updateMultiSelectButton() {
+      const btn = document.getElementById('start-selected-btn');
+      const badge = document.getElementById('selected-topics-badge');
+      if (selectedTopicIds.size > 0) {
+        btn.classList.remove('hidden');
+        btn.classList.add('flex');
+        badge.textContent = selectedTopicIds.size;
+      } else {
+        btn.classList.add('hidden');
+        btn.classList.remove('flex');
+      }
+    }
+
+    function startSelectedTopics() {
+      if (selectedTopicIds.size === 0) return;
+      startTopicStudy(Array.from(selectedTopicIds));
+    }
+
+    function startQuickMixSession() {
+      const allIds = CURRICULUM_DATA.map(t => t.id);
+      startTopicStudy(allIds, true);
+    }
+
+    // Start Flashcard Study Session (Screen 3)
+    function startTopicStudy(topicIds, forceAll = false) {
+      currentSessionTopicIds = topicIds;
+      const now = Date.now();
+      let pool = [];
+      let allTopicWords = [];
+
+      const matchedTopics = CURRICULUM_DATA.filter(t => topicIds.includes(t.id));
+      if (matchedTopics.length === 1) {
+        currentSessionTitle = `${matchedTopics[0].number}. ${matchedTopics[0].deTitle}`;
+      } else {
+        currentSessionTitle = `${matchedTopics.length} ta tanlangan mavzu`;
+      }
+
+      matchedTopics.forEach(t => {
+        t.words.forEach(w => {
+          const item = { ...w, topicLabel: `${t.number}. ${t.deTitle} - ${t.uzTitle}` };
+          allTopicWords.push(item);
+          const prog = getCardProgress(w.id);
+          if (forceAll || prog.due <= now) {
+            pool.push(item);
+          }
+        });
+      });
+
+      // If all cards in this topic are already reviewed for today, load all words for extra practice
+      if (pool.length === 0) {
+        pool = [...allTopicWords];
+        showToast('Barcha rejalashtirilgan so‘zlar yodlangan. Takrorlash rejimi ochildi!');
+      }
+
+      // Shuffle slightly for multi-topic or keep logical order for single new topic
+      if (matchedTopics.length > 1 || forceAll) {
+        pool.sort(() => Math.random() - 0.5);
+      }
+
+      activeStudyQueue = pool;
+      currentCardIndex = 0;
+      isCardFlipped = false;
+
+      document.getElementById('study-topic-title').textContent = currentSessionTitle;
+      document.getElementById('session-complete-panel').classList.add('hidden');
+      document.getElementById('flashcard-stage').classList.remove('hidden');
+      document.getElementById('show-answer-wrapper').classList.remove('hidden');
+      document.getElementById('srs-buttons-wrapper').classList.add('hidden');
+
+      navigateTo('study');
+      renderCurrentCard();
+    }
+
+    function practiceAllAgain() {
+      startTopicStudy(currentSessionTopicIds, true);
+    }
+
+    function toggleStudyDirection() {
+      studyDirection = studyDirection === 'DE_UZ' ? 'UZ_DE' : 'DE_UZ';
+      document.getElementById('direction-toggle-btn').textContent = studyDirection === 'DE_UZ' ? 'DE → UZ' : 'UZ → DE';
+      isCardFlipped = false;
+      renderCurrentCard();
+    }
+
+    // Render Current Flashcard
+    function renderCurrentCard() {
+      const total = activeStudyQueue.length;
+      if (currentCardIndex >= total) {
+        // Session Finished
+        document.getElementById('flashcard-stage').classList.add('hidden');
+        document.getElementById('show-answer-wrapper').classList.add('hidden');
+        document.getElementById('srs-buttons-wrapper').classList.add('hidden');
+        document.getElementById('srs-buttons-wrapper').classList.remove('grid');
+        document.getElementById('session-complete-panel').classList.remove('hidden');
+        document.getElementById('study-progress-bar').style.width = '100%';
+        document.getElementById('study-counter-text').textContent = 'Bajarildi!';
+        return;
+      }
+
+      const card = activeStudyQueue[currentCardIndex];
+      const prog = getCardProgress(card.id);
+      const inner = document.getElementById('flashcard-inner');
+
+      // Reset Flip State
+      isCardFlipped = false;
+      inner.classList.remove('is-flipped');
+      document.getElementById('show-answer-wrapper').classList.remove('hidden');
+      document.getElementById('srs-buttons-wrapper').classList.add('hidden');
+      document.getElementById('srs-buttons-wrapper').classList.remove('grid');
+
+      // Progress & Counter
+      const pct = Math.round((currentCardIndex / total) * 100);
+      document.getElementById('study-progress-bar').style.width = `${Math.max(6, pct)}%`;
+      document.getElementById('study-counter-text').textContent = `${currentCardIndex + 1} / ${total} karta`;
+
+      // Status Pill
+      const pill = document.getElementById('card-status-pill');
+      if (prog.reps === 0) {
+        pill.textContent = 'Yangi so‘z';
+        pill.className = 'px-3 py-1 rounded-full text-[11px] font-semibold bg-cyan-500/15 text-cyan-300 border border-cyan-400/30';
+      } else if (prog.interval >= 4) {
+        pill.textContent = 'Yodlangan ✓';
+        pill.className = 'px-3 py-1 rounded-full text-[11px] font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-400/30';
+      } else {
+        pill.textContent = 'Takrorlanmoqda';
+        pill.className = 'px-3 py-1 rounded-full text-[11px] font-semibold bg-amber-500/15 text-amber-300 border border-amber-400/30';
+      }
+
+      // Front & Back Content based on Direction
+      document.getElementById('card-back-topic-tag').textContent = card.topicLabel;
+
+      if (studyDirection === 'DE_UZ') {
+        document.getElementById('card-front-lang').textContent = 'Deutsch';
+        document.getElementById('card-front-text').innerHTML = formatGermanWordHTML(card.de);
+        document.getElementById('card-back-sub').innerHTML = formatGermanWordHTML(card.de);
+        document.getElementById('card-back-text').textContent = card.uz;
+        // Auto-pronounce German on card load
+        setTimeout(() => speakGerman(card.de), 250);
+      } else {
+        document.getElementById('card-front-lang').textContent = "O'zbekcha";
+        document.getElementById('card-front-text').textContent = card.uz;
+        document.getElementById('card-back-sub').textContent = card.uz;
+        document.getElementById('card-back-text').innerHTML = formatGermanWordHTML(card.de);
+      }
+
+      // Update dynamic interval labels on buttons
+      const nextGoodDays = prog.reps === 0 ? 1 : Math.max(2, Math.round(prog.interval * prog.ease));
+      const nextEasyDays = prog.reps === 0 ? 4 : Math.max(4, Math.round(prog.interval * prog.ease * 1.3));
+      document.getElementById('interval-good').textContent = `${nextGoodDays} kun`;
+      document.getElementById('interval-easy').textContent = `${nextEasyDays} kun`;
+    }
+
+    function flipCard() {
+      if (currentCardIndex >= activeStudyQueue.length) return;
+      const inner = document.getElementById('flashcard-inner');
+      isCardFlipped = !isCardFlipped;
+
+      if (isCardFlipped) {
+        inner.classList.add('is-flipped');
+        document.getElementById('show-answer-wrapper').classList.add('hidden');
+        const srsBtns = document.getElementById('srs-buttons-wrapper');
+        srsBtns.classList.remove('hidden');
+        srsBtns.classList.add('grid');
+        if (studyDirection === 'UZ_DE') {
+          speakGerman(activeStudyQueue[currentCardIndex].de);
+        }
+      } else {
+        inner.classList.remove('is-flipped');
+      }
+    }
+
+    function speakCurrentCard() {
+      if (currentCardIndex < activeStudyQueue.length) {
+        speakGerman(activeStudyQueue[currentCardIndex].de);
+      }
+    }
+
+    // Anki SM-2 Spaced Repetition Rating Logic
+    // 1: Again (Qiyin), 2: Hard (O'rtacha), 3: Good (Yaxshi), 4: Easy (Oson)
+    function rateCard(quality) {
+      registerPractice();
+      const card = activeStudyQueue[currentCardIndex];
+      const prog = getCardProgress(card.id);
+      const now = Date.now();
+      const DAY_MS = 24 * 60 * 60 * 1000;
+
+      if (quality === 1) {
+        // Again: Reset repetitions and re-insert card 2 steps later in current session
+        prog.reps = 0;
+        prog.easy = 0;
+        prog.interval = 0;
+        prog.due = now;
+        srsState[card.id] = prog;
+        saveSRSState();
+
+        const reinsertPos = Math.min(activeStudyQueue.length, currentCardIndex + 3);
+        activeStudyQueue.splice(reinsertPos, 0, card);
+        currentCardIndex++;
+        renderCurrentCard();
+        return;
+      }
+
+      if (quality === 2) {
+        // Hard
+        prog.reps = Math.max(1, prog.reps);
+        prog.interval = 0.5; // 12 hours
+        prog.ease = Math.max(1.3, prog.ease - 0.15);
+      } else if (quality === 3) {
+        // Good
+        if (prog.reps === 0) prog.interval = 1;
+        else if (prog.reps === 1) prog.interval = 3;
+        else prog.interval = Math.round(prog.interval * prog.ease);
+        prog.reps += 1;
+      } else if (quality === 4) {
+        // Easy
+        if (prog.reps === 0) prog.interval = 4;
+        else prog.interval = Math.round(prog.interval * prog.ease * 1.3) + 1;
+        prog.reps += 1;
+        prog.easy = (prog.easy || 0) + 1;
+        prog.ease += 0.15;
+      }
+
+      prog.due = now + prog.interval * DAY_MS;
+      srsState[card.id] = prog;
+      saveSRSState();
+
+      currentCardIndex++;
+      renderCurrentCard();
+    }
+
+    // Open Topic Vocabulary Table (Screen 4)
+    function openTopicTable(topicId) {
+      currentTableTopicId = topicId;
+      confirmResetPending = false;
+      const topic = CURRICULUM_DATA.find(t => t.id === topicId);
+      if (!topic) return;
+
+      document.getElementById('table-topic-title').textContent = `${topic.number}. ${topic.deTitle} - ${topic.uzTitle}`;
+      document.getElementById('table-start-study-btn').onclick = () => startTopicStudy([topic.id]);
+      
+      const resetBtn = document.getElementById('table-reset-btn');
+      resetBtn.textContent = 'Tiklash';
+      resetBtn.onclick = () => handleResetTopicProgress(topic.id);
+
+      const tbody = document.getElementById('vocabulary-table-body');
+      tbody.innerHTML = topic.words.map((w, idx) => {
+        const prog = getCardProgress(w.id);
+        let statusBadge = `<span class="px-2.5 py-0.5 rounded-full text-[11px] bg-slate-800 text-slate-400">Yangi</span>`;
+        if (prog.reps >= 1 && prog.interval >= 4) {
+          statusBadge = `<span class="px-2.5 py-0.5 rounded-full text-[11px] bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">Yodlangan</span>`;
+        } else if (prog.reps >= 1) {
+          statusBadge = `<span class="px-2.5 py-0.5 rounded-full text-[11px] bg-cyan-500/20 text-cyan-300 border border-cyan-400/30">O‘rganilmoqda</span>`;
+        }
+
+        return `
+          <tr class="hover:bg-white/5 transition">
+            <td class="py-3 px-3 text-slate-400 font-mono text-xs">${idx + 1}</td>
+            <td class="py-3 px-3 font-semibold text-white text-sm sm:text-base">${formatGermanWordHTML(w.de)}</td>
+            <td class="py-3 px-3 text-slate-300">${w.uz}</td>
+            <td class="py-3 px-3 text-center">
+              <button onclick="speakGerman('${w.de.replace(/'/g, "\\'")}')" class="w-8 h-8 rounded-lg bg-cyan-500/15 hover:bg-cyan-500/30 text-cyan-300 inline-flex items-center justify-center transition">
+                🔊
+              </button>
+            </td>
+            <td class="py-3 px-3 text-right">${statusBadge}</td>
+          </tr>
+        `;
+      }).join('');
+
+      navigateTo('table');
+    }
+
+    // Two-step safe reset without browser confirm()
+    function handleResetTopicProgress(topicId) {
+      const btn = document.getElementById('table-reset-btn');
+      if (!confirmResetPending) {
+        confirmResetPending = true;
+        btn.textContent = 'Tasdiqlash?';
+        showToast('Natijalarni tozalash uchun tugmani yana bir marta bosing.');
+        return;
+      }
+
+      const topic = CURRICULUM_DATA.find(t => t.id === topicId);
+      if (topic) {
+        topic.words.forEach(w => delete srsState[w.id]);
+        saveSRSState();
+        showToast('Mavzu natijalari noldan tiklandi.');
+        openTopicTable(topicId);
+      }
+    }
+
+    // Keyboard Shortcuts during Flashcard Study
+    document.addEventListener('keydown', (e) => {
+      const studyScreen = document.getElementById('screen-study');
+      if (studyScreen.classList.contains('hidden')) return;
+
+      if (e.code === 'Space') {
+        e.preventDefault();
+        if (!isCardFlipped) flipCard();
+      } else if (isCardFlipped) {
+        if (e.key === '1') rateCard(1);
+        if (e.key === '2') rateCard(2);
+        if (e.key === '3') rateCard(3);
+        if (e.key === '4') rateCard(4);
+      }
+    });
+
+    // Owl Greeting: speaks once on the first tap / key press (browsers block autoplay audio)
+    const OWL_GREETING_DE = 'Hallo, liebe Schüler! Ich bin der Assistent von Teacher Pardayev. Lerne Wörter, und ich werde größer!';
+    const OWL_GREETING_UZ = 'Salom, aziz o‘quvchilar! Men Teacher Pardayevning yordamchisiman. So‘zlarni yod ol, men esa kattalashaman!';
+    let owlGreeted = false;
+
+    function showOwlBubble(show) {
+      const b = document.getElementById('owl-bubble');
+      if (!b) return;
+      b.classList.toggle('opacity-0', !show);
+      b.classList.toggle('translate-y-4', !show);
+    }
+
+    let owlHideTimer = null, owlSayId = 0;
+    function owlSay(de, uz) {
+      document.getElementById('owl-bubble-de').textContent = de;
+      document.getElementById('owl-bubble-uz').textContent = uz;
+      showOwlBubble(true);
+      clearTimeout(owlHideTimer);
+      owlHideTimer = setTimeout(() => showOwlBubble(false), 14000);
+      if (!('speechSynthesis' in window)) return;
+      const myId = ++owlSayId;
+      window.speechSynthesis.cancel();
+      const owlSvg = document.getElementById('owl-svg');
+      const u = new SpeechSynthesisUtterance(de);
+      u.lang = 'de-DE'; u.rate = 0.9;
+      const deVoice = window.speechSynthesis.getVoices().find(v => v.lang.toLowerCase().startsWith('de'));
+      if (deVoice) u.voice = deVoice;
+      u.onstart = () => { if (myId === owlSayId && owlSvg) owlSvg.classList.add('owl-talking'); };
+      const done = () => {
+        if (myId !== owlSayId) return;
+        if (owlSvg) owlSvg.classList.remove('owl-talking');
+        clearTimeout(owlHideTimer);
+        owlHideTimer = setTimeout(() => showOwlBubble(false), 1800);
+      };
+      u.onend = done; u.onerror = done;
+      window.speechSynthesis.speak(u);
+    }
+
+    function owlGreet() {
+      if (owlGreeted) return;
+      owlGreeted = true;
+      setOwlSleepy(false);
+      if (owlReturning) owlSay('Willkommen zurück! Schön, dass du wieder da bist!', 'Qaytganing bilan! Yana ko‘rishganimdan xursandman!');
+      else owlSay(OWL_GREETING_DE, OWL_GREETING_UZ);
+    }
+
+    document.addEventListener('click', owlGreet, { once: true, capture: true });
+    document.addEventListener('keydown', owlGreet, { once: true, capture: true });
+
+    // Initialize App on Load
+    window.addEventListener('DOMContentLoaded', () => {
+      updateGlobalStats();
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.getVoices();
+      }
+    });
+  </script>
+</body>
+</html>
